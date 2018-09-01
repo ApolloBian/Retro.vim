@@ -82,10 +82,11 @@ function! retro#palette#dark#create() abort
         \   'lightness': +0.09,
         \ })
   let g.todo_fg = pgmnt#color#hsl(hue_green, 0.60, 0.75)
+  let g.todo_fg = g.red
   let g.visual_bg = pgmnt#color#adjust_color(
         \ g.normal_bg, {
-        \   'saturation': +0.05,
-        \   'lightness': +0.10,
+        \   'saturation': -0.05,
+        \   'lightness': -0.05,
         \ })
   let g.wildmenu_bg = pgmnt#color#lighten(g.statusline_bg, 0.30)
   let g.wildmenu_fg = g.statusline_fg

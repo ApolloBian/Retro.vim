@@ -8,7 +8,7 @@
 "
 " File:       iceberg.vim
 " Maintainer: cocopon <cocopon@me.com>
-" Modified:   2018-09-02 01:43+0800
+" Modified:   2018-09-02 03:26+0800
 " License:    MIT
 
 
@@ -32,7 +32,7 @@ hi! CursorLine cterm=NONE ctermbg=235 guibg=#eeeeea
 hi! Comment ctermfg=242 guifg=#aeae9c
 hi! Constant ctermfg=140 guifg=#b71414
 hi! Cursor ctermbg=252 ctermfg=234 guibg=#0c0c0c guifg=#fafaf8
-hi! CursorLineNr ctermbg=237 ctermfg=253 guibg=#d7d7cd guifg=#1f1f1f
+hi! CursorLineNr ctermbg=237 ctermfg=253 guibg=#d7d7cd guifg=#0c0c0c
 hi! Delimiter ctermfg=252 guifg=#0c0c0c
 hi! DiffAdd ctermbg=29 ctermfg=158 guibg=#e5b5b3 guifg=#3f0e0e
 hi! DiffChange ctermbg=23 ctermfg=159 guibg=#e5b5b3 guifg=#3f0e0e
@@ -80,11 +80,11 @@ hi! TabLine cterm=NONE ctermbg=245 ctermfg=234 gui=NONE guibg=#969681 guifg=#1b1
 hi! TabLineFill cterm=reverse ctermbg=234 ctermfg=245 gui=reverse guibg=#1b1b17 guifg=#969681
 hi! TabLineSel cterm=NONE ctermbg=234 ctermfg=252 gui=NONE guibg=#fafaf8 guifg=#474747
 hi! Title ctermfg=203 gui=NONE guifg=#b71414
-hi! Todo ctermbg=234 ctermfg=150 guibg=#fafaf8 guifg=#e5e599
+hi! Todo ctermbg=234 ctermfg=150 guibg=#fafaf8 guifg=#b71414
 hi! Type ctermfg=109 gui=NONE guifg=#b71414
 hi! Underlined cterm=underline ctermfg=110 gui=underline guifg=#b71414 term=underline
 hi! VertSplit cterm=NONE ctermbg=233 ctermfg=233 gui=NONE guibg=#f3f3ef guifg=#f3f3ef
-hi! Visual ctermbg=236 guibg=#ffffff
+hi! Visual ctermbg=236 guibg=#eeeeea
 hi! WildMenu ctermbg=255 ctermfg=234 guibg=#dbdbd4 guifg=#1b1b17
 hi! diffAdded ctermfg=150 guifg=#b71414
 hi! diffRemoved ctermfg=203 guifg=#b71414
@@ -98,7 +98,7 @@ hi! GitGutterChange ctermbg=235 ctermfg=109 guibg=#eeeeea guifg=#b71414
 hi! GitGutterChangeDelete ctermbg=235 ctermfg=109 guibg=#eeeeea guifg=#b71414
 hi! GitGutterDelete ctermbg=235 ctermfg=203 guibg=#eeeeea guifg=#b71414
 hi! Sneak ctermbg=140 ctermfg=234 guibg=#b71414 guifg=#fafaf8
-hi! SneakScope ctermbg=236 ctermfg=242 guibg=#ffffff guifg=#aeae9c
+hi! SneakScope ctermbg=236 ctermfg=242 guibg=#eeeeea guifg=#aeae9c
 hi! SyntasticErrorSign ctermbg=235 ctermfg=203 guibg=#eeeeea guifg=#b71414
 hi! SyntasticStyleErrorSign ctermbg=235 ctermfg=203 guibg=#eeeeea guifg=#b71414
 hi! SyntasticStyleWarningSign ctermbg=235 ctermfg=203 guibg=#eeeeea guifg=#b71414
