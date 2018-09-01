@@ -1,45 +1,47 @@
-function! iceberg#palette#dark#create() abort
-  let hue_base = 230
+function! retro#palette#dark#create() abort
+  let hue_base = 60 "a little yellow
 
   let hue_red = 0
   let hue_orange = 25
-  let hue_green = 70
-  let hue_lblue = 190
-  let hue_blue = 215
-  let hue_purple = 255
+  let hue_green = hue_base
+  let hue_lblue = hue_base
+  let hue_blue = hue_base
+  let hue_purple = hue_base
 
   " gui {{{
   let g = {}
 
   " palette
-  let g.blue   = pgmnt#color#hsl(hue_blue,   0.37, 0.65)
-  let g.green  = pgmnt#color#hsl(hue_green,  0.32, 0.63)
-  let g.lblue  = pgmnt#color#hsl(hue_lblue,  0.32, 0.65)
-  let g.orange = pgmnt#color#hsl(hue_orange, 0.65, 0.68)
-  let g.purple = pgmnt#color#hsl(hue_purple, 0.32, 0.68)
-  let g.red    = pgmnt#color#hsl(hue_red,    0.65, 0.68)
+  " let g.blue   = pgmnt#color#hsl(hue_blue,   0.10, 0.40)
+  " let g.green  = pgmnt#color#hsl(hue_green,  0.10, 0.40)
+  " let g.lblue  = pgmnt#color#hsl(hue_lblue,  0.10, 0.40)
+  " let g.purple = pgmnt#color#hsl(hue_purple, 0.10, 0.40)
+  " let g.orange = pgmnt#color#hsl(hue_orange, 0.65, 0.68)
+
+  let g.red    = pgmnt#color#hsl(hue_red,    0.80, 0.40)    "selected red
+  let g.blue   = g.red
+  let g.green   = g.red
+  let g.lblue   = g.red
+  let g.purple   = g.red
+  let g.orange   = g.red
 
   " normal
-  let g.normal_bg = pgmnt#color#hsl(hue_base, 0.20, 0.11)
-  let g.normal_fg = pgmnt#color#hsl(hue_base, 0.10, 0.80)
+  let g.normal_bg = pgmnt#color#hsl(hue_base, 0.20, 0.98)   " yellowish white
+  let g.normal_fg = pgmnt#color#hsl(hue_base, 0.00, 0.05)   " 
 
   " linenr
   let g.linenr_bg = pgmnt#color#adjust_color(
         \ g.normal_bg, {
-        \   'saturation': +0.05,
-        \   'lightness': +0.05,
+        \   'saturation': -0.05,
+        \   'lightness': -0.05,
         \ })
-  let g.linenr_fg = pgmnt#color#lighten(g.linenr_bg, 0.20)
+  let g.linenr_fg = pgmnt#color#darken(g.linenr_bg, 0.30)
   let g.cursorlinenr_bg = pgmnt#color#adjust_color(
         \ g.linenr_bg, {
-        \   'saturation': +0.10,
-        \   'lightness': +0.10,
+        \   'saturation': 0.00,
+        \   'lightness': -0.10,
         \ })
-  let g.cursorlinenr_fg = pgmnt#color#adjust_color(
-        \ g.linenr_fg, {
-        \   'saturation': +0.10, 
-        \   'lightness': +0.50,
-        \ })
+  let g.cursorlinenr_fg = g.normal_fg
 
   " diff
   let g.diffadd_bg = pgmnt#color#mix(g.green, g.normal_bg, 0.30)
@@ -62,7 +64,7 @@ function! iceberg#palette#dark#create() abort
   let g.pmenusel_fg = pgmnt#color#hsl(hue_base, 0.20, 0.95)
 
   " misc
-  let g.comment_fg = pgmnt#color#hsl(hue_base, 0.12, 0.48)
+  let g.comment_fg = pgmnt#color#hsl(hue_base, 0.10, 0.65)
   let g.cursorline_bg = g.linenr_bg
   let g.folded_bg = g.linenr_bg
   let g.folded_fg = pgmnt#color#adjust_color(

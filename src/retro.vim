@@ -4,7 +4,7 @@
 " https://github.com/cocopon/pgmnt.vim
 
 function! s:create_context() abort
-  let p = iceberg#palette#dark#create()
+  let p = retro#palette#dark#create()
   let c = p.cterm
   let g = p.gui
 
@@ -112,8 +112,8 @@ function! s:create_context() abort
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'Function', {
-        \   'ctermfg': c.orange,
-        \   'guifg': g.orange,
+        \   'ctermfg': c.red,
+        \   'guifg': g.red,
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'Identifier', {
@@ -295,9 +295,9 @@ function! s:create_context() abort
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'Title', {
-        \   'ctermfg': c.orange,
+        \   'ctermfg': c.red,
         \   'gui': 'NONE',
-        \   'guifg': g.orange,
+        \   'guifg': g.red,
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'Todo', {
@@ -435,8 +435,8 @@ function! s:create_context() abort
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ ['EasyMotionTarget2First', 'EasyMotionTarget2Second'], {
-        \   'ctermfg': c.orange,
-        \   'guifg': g.orange,
+        \   'ctermfg': c.red,
+        \   'guifg': g.red,
         \ }))
 
   " [vim-flow](https://github.com/flowtype/vim-flow)
@@ -527,9 +527,9 @@ function! s:create_context() abort
   call extend(rules, pgmnt#hi#group(
         \ ['SyntasticStyleWarningSign', 'SyntasticWarningSign'], {
         \   'ctermbg': c.linenr_bg,
-        \   'ctermfg': c.orange,
+        \   'ctermfg': c.red,
         \   'guibg': g.linenr_bg,
-        \   'guifg': g.orange,
+        \   'guifg': g.red,
         \ }))
 
   " [vim-swift](https://github.com/toyamarinyon/vim-swift)
@@ -566,7 +566,7 @@ function! s:create_context() abort
         \   g.normal_bg,
         \   g.red,
         \   g.green,
-        \   g.orange,
+        \   g.red,
         \   g.blue,
         \   g.purple,
         \   g.lblue,
@@ -574,7 +574,7 @@ function! s:create_context() abort
         \   g.comment_fg,
         \   pgmnt#color#adjust_color(g.red,       {'saturation': +0.05, 'lightness': +0.05}),
         \   pgmnt#color#adjust_color(g.green,     {'saturation': +0.05, 'lightness': +0.05}),
-        \   pgmnt#color#adjust_color(g.orange,    {'saturation': +0.05, 'lightness': +0.05}),
+        \   pgmnt#color#adjust_color(g.red,    {'saturation': +0.05, 'lightness': +0.05}),
         \   pgmnt#color#adjust_color(g.blue,      {'saturation': +0.05, 'lightness': +0.05}),
         \   pgmnt#color#adjust_color(g.purple,    {'saturation': +0.05, 'lightness': +0.05}),
         \   pgmnt#color#adjust_color(g.lblue,     {'saturation': +0.05, 'lightness': +0.05}),
@@ -593,12 +593,12 @@ function! s:create_context() abort
 endfunction
 
 call pgmnt#compile(s:create_context(), {
-      \   'output': '../colors/iceberg.vim',
+      \   'output': '../colors/retro.vim',
       \   'template': './template.vim',
       \ })
 
 function! s:create_xline_context() abort
-  let p = iceberg#palette#dark#create()
+  let p = retro#palette#dark#create()
   let c = p.cterm
   let g = p.gui
 
@@ -640,9 +640,9 @@ function! s:create_xline_context() abort
         \   ]),
         \   'col_warning': string([
         \     g.normal_bg,
-        \     g.orange,
+        \     g.red,
         \     c.normal_bg,
-        \     c.orange,
+        \     c.red,
         \   ]),
         \   'col_insert': string([
         \     g.normal_bg,
@@ -652,9 +652,9 @@ function! s:create_xline_context() abort
         \   ]),
         \   'col_replace': string([
         \     g.normal_bg,
-        \     g.orange,
+        \     g.red,
         \     c.normal_bg,
-        \     c.orange,
+        \     c.red,
         \   ]),
         \   'col_visual': string([
         \     g.normal_bg,
@@ -673,11 +673,11 @@ endfunction
 
 call pgmnt#compile(
       \ s:create_xline_context(), {
-      \   'output': '../autoload/airline/themes/iceberg.vim',
+      \   'output': '../autoload/airline/themes/retro.vim',
       \   'template': './template-airline.vim',
       \ })
 call pgmnt#compile(
       \ s:create_xline_context(), {
-      \   'output': '../autoload/lightline/colorscheme/iceberg.vim',
+      \   'output': '../autoload/lightline/colorscheme/retro.vim',
       \   'template': './template-lightline.vim',
       \ })
