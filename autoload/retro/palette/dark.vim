@@ -26,20 +26,20 @@ function! retro#palette#dark#create() abort
   let g.orange   = g.red
 
   " normal
-  let g.normal_bg = pgmnt#color#hsl(hue_base, 0.20, 0.98)   " yellowish white
+  let g.normal_bg = pgmnt#color#hsl(hue_base, 0.10, 0.96)   " yellowish white
   let g.normal_fg = pgmnt#color#hsl(hue_base, 0.00, 0.05)   " 
 
   " linenr
   let g.linenr_bg = pgmnt#color#adjust_color(
         \ g.normal_bg, {
-        \   'saturation': -0.05,
-        \   'lightness': -0.05,
+        \   'saturation': 0.00,
+        \   'lightness': -0.10,
         \ })
   let g.linenr_fg = pgmnt#color#darken(g.linenr_bg, 0.30)
   let g.cursorlinenr_bg = pgmnt#color#adjust_color(
         \ g.linenr_bg, {
         \   'saturation': 0.00,
-        \   'lightness': -0.10,
+        \   'lightness': -0.20,
         \ })
   let g.cursorlinenr_fg = g.normal_fg
 
@@ -53,7 +53,7 @@ function! retro#palette#dark#create() abort
 
   " statusline
   let g.statusline_bg = pgmnt#color#hsl(hue_base, 0.09, 0.55)
-  let g.statusline_fg = pgmnt#color#hsl(hue_base, 0.09, 0.10)
+  let g.statusline_fg = g.normal_fg
   let g.statuslinenc_bg = pgmnt#color#darken(g.normal_bg, 0.03)
   let g.statuslinenc_fg = pgmnt#color#lighten(g.normal_bg, 0.20)
 
@@ -92,12 +92,12 @@ function! retro#palette#dark#create() abort
   let g.wildmenu_fg = g.statusline_fg
 
   " airline/lightline
-  let g.xline_base_bg = pgmnt#color#lighten(g.normal_bg, 0.15)
-  let g.xline_base_fg = pgmnt#color#adjust_color(
+  let g.xline_base_bg = pgmnt#color#adjust_color(
         \ g.normal_bg, {
-        \   'saturation': -0.10,
-        \   'lightness': +0.35,
+        \   'saturation': 0.00,
+        \   'lightness': -0.10,
         \ })
+  let g.xline_base_fg = g.normal_fg
   let g.xline_edge_bg = g.statusline_bg
   let g.xline_edge_fg = g.statusline_fg
   let g.xline_gradient_bg = pgmnt#color#mix(g.xline_base_bg, g.xline_edge_bg, 0.50)
