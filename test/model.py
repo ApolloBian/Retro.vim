@@ -4,6 +4,7 @@ import itertools
 import numpy as np
 import tensorflow as tf
 
+    
 
 from .input import Dataset
 from .ptrnet import ptr_decoder

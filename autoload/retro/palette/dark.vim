@@ -1,5 +1,6 @@
 function! retro#palette#dark#create() abort
-  let hue_base = 60 "a little yellow
+  " let hue_base = 60 "a little yellow
+  let hue_base = 70 "a little yellow
 
   let hue_red = 0
   let hue_orange = 25
@@ -26,21 +27,13 @@ function! retro#palette#dark#create() abort
   let g.orange   = g.red
 
   " normal
-  let g.normal_bg = pgmnt#color#hsl(hue_base, 0.10, 0.96)   " yellowish white
+  let g.normal_bg = pgmnt#color#hsl(hue_base, 0.05, 0.96)   " yellowish white
   let g.normal_fg = pgmnt#color#hsl(hue_base, 0.00, 0.05)   " 
 
   " linenr
-  let g.linenr_bg = pgmnt#color#adjust_color(
-        \ g.normal_bg, {
-        \   'saturation': 0.00,
-        \   'lightness': -0.10,
-        \ })
-  let g.linenr_fg = pgmnt#color#darken(g.linenr_bg, 0.30)
-  let g.cursorlinenr_bg = pgmnt#color#adjust_color(
-        \ g.linenr_bg, {
-        \   'saturation': 0.00,
-        \   'lightness': -0.20,
-        \ })
+  let g.linenr_bg = pgmnt#color#hsl(hue_base, 0.05, 0.80)
+  let g.linenr_fg = pgmnt#color#hsl(hue_base, 0.05, 0.50)
+  let g.cursorlinenr_bg = pgmnt#color#hsl(hue_base, 0.05, 0.60)
   let g.cursorlinenr_fg = g.normal_fg
 
   " diff
@@ -64,7 +57,7 @@ function! retro#palette#dark#create() abort
   let g.pmenusel_fg = pgmnt#color#hsl(hue_base, 0.20, 0.95)
 
   " misc
-  let g.comment_fg = pgmnt#color#hsl(hue_base, 0.10, 0.65)
+  let g.comment_fg = g.linenr_fg
   let g.cursorline_bg = g.linenr_bg
   let g.folded_bg = g.linenr_bg
   let g.folded_fg = pgmnt#color#adjust_color(
@@ -72,15 +65,11 @@ function! retro#palette#dark#create() abort
         \   'saturation': -0.05,
         \   'lightness': +0.35,
         \ })
-  let g.matchparen_bg = pgmnt#color#lighten(g.normal_bg, 0.20)
-  let g.matchparen_fg = pgmnt#color#lighten(g.normal_fg, 0.50)
+  let g.matchparen_bg = g.cursorline_bg
+  let g.matchparen_fg = g.normal_fg
   let g.search_bg = pgmnt#color#hsl(hue_orange, 0.65, 0.70)
   let g.search_fg = pgmnt#color#hsl(hue_orange, 0.50, 0.15)
-  let g.specialkey_fg = pgmnt#color#adjust_color(
-        \ g.normal_bg, {
-        \   'saturation': +0.08,
-        \   'lightness': +0.09,
-        \ })
+  let g.specialkey_fg = g.comment_fg
   let g.todo_fg = pgmnt#color#hsl(hue_green, 0.60, 0.75)
   let g.todo_fg = g.red
   let g.visual_bg = pgmnt#color#adjust_color(

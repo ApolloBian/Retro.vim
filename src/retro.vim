@@ -159,22 +159,22 @@ function! s:create_context() abort
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'Pmenu', {
-        \   'ctermbg': c.pmenu_bg,
-        \   'ctermfg': c.pmenu_fg,
-        \   'guibg': g.pmenu_bg,
-        \   'guifg': g.pmenu_fg,
+        \   'ctermbg': c.linenr_bg,
+        \   'ctermfg': c.normal_fg,
+        \   'guibg': g.linenr_bg,
+        \   'guifg': g.normal_fg,
+        \ }))
+  call extend(rules, pgmnt#hi#group(
+        \ 'PmenuSel', {
+        \   'ctermbg': c.cursorlinenr_bg,
+        \   'ctermfg': c.normal_fg,
+        \   'guibg': g.cursorlinenr_bg,
+        \   'guifg': g.normal_fg,
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'PmenuSbar', {
         \   'ctermbg': c.pmenu_bg,
         \   'guibg': g.pmenu_bg,
-        \ }))
-  call extend(rules, pgmnt#hi#group(
-        \ 'PmenuSel', {
-        \   'ctermbg': c.pmenusel_bg,
-        \   'ctermfg': c.pmenusel_fg,
-        \   'guibg': g.pmenusel_bg,
-        \   'guifg': g.pmenusel_fg,
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'PmenuThumb', {
@@ -315,9 +315,9 @@ function! s:create_context() abort
   call extend(rules, pgmnt#hi#group(
         \ 'Underlined', {
         \   'cterm': 'underline',
-        \   'ctermfg': c.blue,
+        \   'ctermfg': c.normal_fg,
         \   'gui': 'underline',
-        \   'guifg': g.blue,
+        \   'guifg': g.normal_fg,
         \   'term': 'underline',
         \ }))
   call extend(rules, pgmnt#hi#group(
@@ -392,6 +392,33 @@ function! s:create_context() abort
   " vim
   call add(links, pgmnt#hi#link('vimContinue', 'Comment'))
   call add(links, pgmnt#hi#link('vimIsCommand', 'Statement'))
+
+
+  " ale
+  call extend(rules, pgmnt#hi#group(
+        \ 'ALEErrorSign', {
+        \   'ctermbg': c.linenr_bg,
+        \   'ctermfg': c.red,
+        \   'guibg': g.linenr_bg,
+        \   'guifg': g.red,
+        \ }))
+  call extend(rules, pgmnt#hi#group(
+        \ 'ALEWarningSign', {
+        \   'ctermbg': c.linenr_bg,
+        \   'ctermfg': c.red,
+        \   'guibg': g.linenr_bg,
+        \   'guifg': g.red,
+        \ }))
+  call extend(rules, pgmnt#hi#group(
+        \ ['ALEStyleError', 'ALEError'], {
+        \   'cterm': 'underline',
+        \   'gui': 'underline',
+        \ }))
+  call extend(rules, pgmnt#hi#group(
+        \ 'ALEWarning', {
+        \   'cterm': 'underline',
+        \   'gui': 'underline',
+        \ }))
 
   " xml
   call add(links, pgmnt#hi#link('xmlAttrib', 'Constant'))
