@@ -27,8 +27,8 @@ function! retro#palette#dark#create() abort
   let g.orange   = g.red
 
   " normal
-  let g.normal_bg = pgmnt#color#hsl(hue_base, 0.05, 0.96)   " yellowish white
-  let g.normal_fg = pgmnt#color#hsl(hue_base, 0.00, 0.05)   " 
+  let g.normal_bg = pgmnt#color#hsl(hue_base, 0.00, 0.96)   "pure white
+  let g.normal_fg = pgmnt#color#hsl(hue_base, 0.00, 0.05)
 
   " linenr
   let g.linenr_bg = pgmnt#color#hsl(hue_base, 0.05, 0.80)
