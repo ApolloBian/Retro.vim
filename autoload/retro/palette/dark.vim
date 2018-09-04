@@ -1,6 +1,6 @@
 function! retro#palette#dark#create() abort
   " let hue_base = 60 "a little yellow
-  let hue_base = 70 "a little yellow
+  let hue_base = 42 "a little yellow
 
   let hue_red = 0
   let hue_orange = 25
