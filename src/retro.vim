@@ -673,7 +673,7 @@ function! s:create_xline_context() abort
         \   ]),
         \   'col_insert': string([
         \     g.normal_bg,
-        \     g.blue,
+        \     g.darkblue,
         \     c.normal_bg,
         \     c.blue,
         \   ]),
