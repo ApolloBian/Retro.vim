@@ -9,7 +9,7 @@ function! s:build_palette() abort
   let col_gradient = ['#0c0c0c', '#b8b5ad', 234, 241]
   let col_nc       = ['#ffffff', '#ececec', 238, 233]
   let col_warning  = ['#f4f4f4', '#b71414', 234, 203]
-  let col_insert   = ['#f4f4f4', '#b71414', 234, 110]
+  let col_insert   = ['#f4f4f4', '#3d3d8e', 234, 110]
   let col_replace  = ['#f4f4f4', '#b71414', 234, 203]
   let col_visual   = ['#f4f4f4', '#b71414', 234, 150]
   let col_red      = ['#b71414', '#f4f4f4', 203, 234]

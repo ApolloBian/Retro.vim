@@ -3,6 +3,7 @@ function! retro#palette#dark#create() abort
   let hue_base = 42 "a little yellow
 
   let hue_red = 0
+  let hue_darkblue = 240
   let hue_orange = 25
   let hue_green = hue_base
   let hue_lblue = hue_base
@@ -20,6 +21,7 @@ function! retro#palette#dark#create() abort
   " let g.orange = pgmnt#color#hsl(hue_orange, 0.65, 0.68)
 
   let g.red    = pgmnt#color#hsl(hue_red,    0.80, 0.40)    "selected red
+  let g.darkblue = pgmnt#color#hsl(hue_darkblue, 0.40, 0.40)
   let g.blue   = g.red
   let g.green   = g.red
   let g.lblue   = g.red

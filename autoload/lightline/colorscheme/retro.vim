@@ -19,7 +19,7 @@ function! s:build_palette() abort
   let col_normal   = ['#0c0c0c', '#969081', 234, 245]
   let col_error    = ['#f4f4f4', '#b71414', 234, 203]
   let col_warning  = ['#f4f4f4', '#b71414', 234, 203]
-  let col_insert   = ['#f4f4f4', '#b71414', 234, 110]
+  let col_insert   = ['#f4f4f4', '#3d3d8e', 234, 110]
   let col_replace  = ['#f4f4f4', '#b71414', 234, 203]
   let col_visual   = ['#f4f4f4', '#b71414', 234, 150]
   let col_tabsel   = ['#0c0c0c', '#969081', 234, 245]
