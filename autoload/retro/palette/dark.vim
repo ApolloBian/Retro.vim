@@ -1,41 +1,39 @@
 function! retro#palette#dark#create() abort
-  " let hue_base = 60 "a little yellow
-  let hue_base = 42 "a little yellow
-
   let hue_red = 0
-  let hue_darkblue = 240
   let hue_orange = 25
-  let hue_green = hue_base
-  let hue_lblue = hue_base
-  let hue_blue = hue_base
-  let hue_purple = hue_base
+
+
+  " color palette
+  let hue_red = 355
+  let hue_blue = 215
+  let hue_green = 170
+  let hue_bgwhite = 350
+  let hue_fgblack = 205
+  let hue_modgray = 205
+  " some other alternative colors
+  " #1095a9 (river blue)
+
 
   " gui {{{
   let g = {}
 
-  " palette
-  " let g.blue   = pgmnt#color#hsl(hue_blue,   0.10, 0.40)
-  " let g.green  = pgmnt#color#hsl(hue_green,  0.10, 0.40)
-  " let g.lblue  = pgmnt#color#hsl(hue_lblue,  0.10, 0.40)
-  " let g.purple = pgmnt#color#hsl(hue_purple, 0.10, 0.40)
-  " let g.orange = pgmnt#color#hsl(hue_orange, 0.65, 0.68)
-
   let g.red    = pgmnt#color#hsl(hue_red,    0.80, 0.40)    "selected red
-  let g.darkblue = pgmnt#color#hsl(hue_darkblue, 0.40, 0.40)
+  let g.darkblue = pgmnt#color#hsl(hue_blue, 0.80, 0.40)
   let g.blue   = g.red
-  let g.green   = g.red
+  let g.green   = pgmnt#color#hsl(hue_green, 0.81, 0.37)
   let g.lblue   = g.red
   let g.purple   = g.red
   let g.orange   = g.red
+  let g.highlight_bg = pgmnt#color#hsl(hue_green, 0.80, 0.40)
 
   " normal
-  let g.normal_bg = pgmnt#color#hsl(hue_base, 0.00, 0.96)   "pure white
-  let g.normal_fg = pgmnt#color#hsl(hue_base, 0.00, 0.05)
+  let g.normal_bg = pgmnt#color#hsl(hue_bgwhite, 0.00, 0.96)   "pure white
+  let g.normal_fg = pgmnt#color#hsl(hue_fgblack, 0.00, 0.05)
 
   " linenr
-  let g.linenr_bg = pgmnt#color#hsl(hue_base, 0.05, 0.80)
-  let g.linenr_fg = pgmnt#color#hsl(hue_base, 0.05, 0.50)
-  let g.cursorlinenr_bg = pgmnt#color#hsl(hue_base, 0.05, 0.60)
+  let g.linenr_bg = pgmnt#color#hsl(hue_modgray, 0.05, 0.80)
+  let g.linenr_fg = pgmnt#color#hsl(hue_modgray, 0.05, 0.50)
+  let g.cursorlinenr_bg = pgmnt#color#hsl(hue_modgray, 0.05, 0.60)
   let g.cursorlinenr_fg = g.normal_fg
 
   " diff
@@ -47,16 +45,16 @@ function! retro#palette#dark#create() abort
   let g.diffdelete_fg = pgmnt#color#mix(g.red, g.normal_fg, 0.30)
 
   " statusline
-  let g.statusline_bg = pgmnt#color#hsl(hue_base, 0.09, 0.55)
+  let g.statusline_bg = pgmnt#color#hsl(hue_modgray, 0.09, 0.55)
   let g.statusline_fg = g.normal_fg
   let g.statuslinenc_bg = pgmnt#color#darken(g.normal_bg, 0.03)
   let g.statuslinenc_fg = pgmnt#color#lighten(g.normal_bg, 0.20)
 
   " pmenu
-  let g.pmenu_bg = pgmnt#color#hsl(hue_base, 0.20, 0.30)
+  let g.pmenu_bg = pgmnt#color#hsl(hue_modgray, 0.20, 0.30)
   let g.pmenu_fg = g.normal_fg
-  let g.pmenusel_bg = pgmnt#color#hsl(hue_base, 0.20, 0.45)
-  let g.pmenusel_fg = pgmnt#color#hsl(hue_base, 0.20, 0.95)
+  let g.pmenusel_bg = pgmnt#color#hsl(hue_modgray, 0.20, 0.45)
+  let g.pmenusel_fg = pgmnt#color#hsl(hue_modgray, 0.20, 0.95)
 
   " misc
   let g.comment_fg = g.linenr_fg
@@ -67,13 +65,12 @@ function! retro#palette#dark#create() abort
         \   'saturation': -0.05,
         \   'lightness': +0.35,
         \ })
-  let g.matchparen_bg = g.cursorline_bg
+  let g.matchparen_bg = g.highlight_bg
   let g.matchparen_fg = g.normal_fg
-  let g.search_bg = pgmnt#color#hsl(hue_orange, 0.65, 0.70)
-  let g.search_fg = pgmnt#color#hsl(hue_orange, 0.50, 0.15)
+  let g.search_bg = g.highlight_bg
+  let g.search_fg = g.normal_bg
   let g.specialkey_fg = g.comment_fg
-  let g.todo_fg = pgmnt#color#hsl(hue_green, 0.60, 0.75)
-  let g.todo_fg = g.red
+  let g.todo_fg = g.blue
   let g.visual_bg = pgmnt#color#adjust_color(
         \ g.normal_bg, {
         \   'saturation': -0.05,
@@ -95,7 +92,7 @@ function! retro#palette#dark#create() abort
   let g.xline_gradient_fg = g.xline_edge_fg
 
   " plugins
-  let g.easymotion_shade_fg = pgmnt#color#hsl(hue_base, 0.20, 0.30)
+  let g.easymotion_shade_fg = pgmnt#color#hsl(hue_modgray, 0.20, 0.30)
   " }}}
 
   " cterm {{{

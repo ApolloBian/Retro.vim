@@ -183,18 +183,20 @@ function! s:create_context() abort
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'PreProc', {
-        \   'ctermfg': c.green,
-        \   'guifg': g.green,
+        \   'ctermfg': c.blue,
+        \   'guifg': g.blue,
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'Question', {
-        \   'ctermfg': c.green,
-        \   'guifg': g.green,
+        \   'ctermfg': c.blue,
+        \   'guifg': g.blue,
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'Search', {
+        \   'cterm': 'bold',
         \   'ctermbg': c.search_bg,
         \   'ctermfg': c.search_fg,
+        \   'gui': 'bold',
         \   'guibg': g.search_bg,
         \   'guifg': g.search_fg,
         \ }))
@@ -207,8 +209,8 @@ function! s:create_context() abort
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'Special', {
-        \   'ctermfg': c.green,
-        \   'guifg': g.green,
+        \   'ctermfg': c.blue,
+        \   'guifg': g.blue,
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'SpellBad', {
@@ -302,7 +304,7 @@ function! s:create_context() abort
   call extend(rules, pgmnt#hi#group(
         \ 'Todo', {
         \   'ctermbg': c.normal_bg,
-        \   'ctermfg': c.green,
+        \   'ctermfg': c.todo_fg,
         \   'guibg': g.normal_bg,
         \   'guifg': g.todo_fg,
         \ }))
