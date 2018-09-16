@@ -72,7 +72,7 @@ function! retro#palette#dark#create() abort
   let g.specialkey_fg = g.comment_fg
   let g.todo_fg = g.blue
   let g.visual_bg = pgmnt#color#adjust_color(
-        \ g.normal_bg, {
+        \ g.cursorline_bg, {
         \   'saturation': -0.05,
         \   'lightness': -0.05,
         \ })

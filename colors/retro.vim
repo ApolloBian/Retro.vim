@@ -8,7 +8,7 @@
 "
 " File:       iceberg.vim
 " Maintainer: cocopon <cocopon@me.com>
-" Modified:   2018-09-15 21:37+0800
+" Modified:   2018-09-16 14:31+0800
 " License:    MIT
 
 
@@ -61,7 +61,7 @@ hi! PmenuSbar ctermbg=236 guibg=#3d4f5b
 hi! PmenuThumb ctermbg=251 guibg=#0c0c0c
 hi! PreProc ctermfg=110 guifg=#b71421
 hi! Question ctermfg=110 guifg=#b71421
-hi! Search cterm=bold ctermbg=216 ctermfg=234 gui=bold guibg=#14b79c guifg=#f4f4f4
+hi! Search ctermbg=216 ctermfg=234 guibg=#14b79c guifg=#f4f4f4
 hi! SignColumn ctermbg=235 ctermfg=239 guibg=#c9ccce guifg=#798085
 hi! Special ctermfg=110 guifg=#b71421
 hi! SpellBad guisp=#b71421
@@ -84,7 +84,7 @@ hi! Todo ctermbg=234 ctermfg=150 guibg=#f4f4f4 guifg=#b71421
 hi! Type ctermfg=109 gui=NONE guifg=#b71421
 hi! Underlined cterm=underline ctermfg=252 gui=underline guifg=#0c0c0c term=underline
 hi! VertSplit cterm=NONE ctermbg=233 ctermfg=233 gui=NONE guibg=#ececec guifg=#ececec
-hi! Visual ctermbg=236 guibg=#e7e7e7
+hi! Visual ctermbg=236 guibg=#bebebe
 hi! WildMenu ctermbg=255 ctermfg=234 guibg=#d4d8db guifg=#0c0c0c
 hi! diffAdded ctermfg=150 guifg=#11aa91
 hi! diffRemoved ctermfg=203 guifg=#b71421
@@ -103,7 +103,7 @@ hi! GitGutterChange ctermbg=235 ctermfg=109 guibg=#c9ccce guifg=#b71421
 hi! GitGutterChangeDelete ctermbg=235 ctermfg=109 guibg=#c9ccce guifg=#b71421
 hi! GitGutterDelete ctermbg=235 ctermfg=203 guibg=#c9ccce guifg=#b71421
 hi! Sneak ctermbg=140 ctermfg=234 guibg=#b71421 guifg=#f4f4f4
-hi! SneakScope ctermbg=236 ctermfg=242 guibg=#e7e7e7 guifg=#798085
+hi! SneakScope ctermbg=236 ctermfg=242 guibg=#bebebe guifg=#798085
 hi! SyntasticErrorSign ctermbg=235 ctermfg=203 guibg=#c9ccce guifg=#b71421
 hi! SyntasticStyleErrorSign ctermbg=235 ctermfg=203 guibg=#c9ccce guifg=#b71421
 hi! SyntasticStyleWarningSign ctermbg=235 ctermfg=203 guibg=#c9ccce guifg=#b71421
@@ -129,7 +129,11 @@ hi! link rubyStringDelimiter String
 hi! link sassClass Special
 hi! link shFunction Normal
 hi! link vimContinue Comment
-hi! link vimIsCommand Statement
+hi! link vimIsCommand Normal
+hi! link vimCommand Normal
+hi! link vimVar Normal
+hi! link vimLet Statement
+hi! link vimFuncKey Statement
 hi! link xmlAttrib Constant
 hi! link xmlAttribPunct Statement
 hi! link xmlEndTag Statement

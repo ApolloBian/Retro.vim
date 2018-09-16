@@ -193,10 +193,8 @@ function! s:create_context() abort
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'Search', {
-        \   'cterm': 'bold',
         \   'ctermbg': c.search_bg,
         \   'ctermfg': c.search_fg,
-        \   'gui': 'bold',
         \   'guibg': g.search_bg,
         \   'guifg': g.search_fg,
         \ }))
@@ -393,7 +391,11 @@ function! s:create_context() abort
 
   " vim
   call add(links, pgmnt#hi#link('vimContinue', 'Comment'))
-  call add(links, pgmnt#hi#link('vimIsCommand', 'Statement'))
+  call add(links, pgmnt#hi#link('vimIsCommand', 'Normal'))
+  call add(links, pgmnt#hi#link('vimCommand', 'Normal'))
+  call add(links, pgmnt#hi#link('vimVar', 'Normal'))
+  call add(links, pgmnt#hi#link('vimLet', 'Statement'))
+  call add(links, pgmnt#hi#link('vimFuncKey', 'Statement'))
 
 
   " ale
