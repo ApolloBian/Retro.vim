@@ -24,7 +24,7 @@ function! retro#palette#dark#create() abort
   let g.lblue   = g.red
   let g.purple   = g.red
   let g.orange   = g.red
-  let g.highlight_bg = pgmnt#color#hsl(hue_green, 0.80, 0.40)
+  let g.highlight_bg = pgmnt#color#hsl(hue_blue, 0.60, 0.60)
 
   " normal
   let g.normal_bg = pgmnt#color#hsl(hue_bgwhite, 0.00, 0.96)   "pure white
