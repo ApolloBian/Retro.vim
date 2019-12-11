@@ -8,7 +8,7 @@
 "
 " File:       iceberg.vim
 " Maintainer: cocopon <cocopon@me.com>
-" Modified:   2019-12-11 16:00+0800
+" Modified:   2019-12-11 17:11+0800
 " License:    MIT
 
 
@@ -47,7 +47,7 @@ hi! NonText ctermbg=234 ctermfg=236 guibg=#f4f4f4 guifg=#798085
 hi! SpecialKey ctermbg=234 ctermfg=236 guibg=#f4f4f4 guifg=#798085
 hi! Folded ctermbg=235 ctermfg=245 guibg=#bcbfc2 guifg=#ffffff
 hi! FoldColumn ctermbg=235 ctermfg=239 guibg=#bcbfc2 guifg=#798085
-hi! Function ctermfg=203 guifg=#b71421
+hi! Function ctermfg=203 gui=bold guifg=#b71421
 hi! Identifier cterm=NONE ctermfg=109 guifg=#b71421
 hi! Include ctermfg=110 guifg=#b71421
 hi! LineNr ctermbg=235 ctermfg=239 guibg=#bcbfc2 guifg=#798085
@@ -55,7 +55,7 @@ hi! MatchParen ctermbg=237 ctermfg=255 guibg=#5b8ed6 guifg=#0c0c0c
 hi! MoreMsg ctermfg=150 guifg=#11aa91
 hi! Normal ctermbg=234 ctermfg=252 guibg=NONE guifg=#0c0c0c
 hi! NormalAutoBG ctermbg=NONE ctermfg=252 guibg=NONE guifg=#0c0c0c
-hi! Operator ctermfg=110 guifg=#b71421
+hi! Operator ctermfg=252 guifg=#0c0c0c
 hi! Pmenu ctermbg=235 ctermfg=252 guibg=#e4e5e6 guifg=#0c0c0c
 hi! PmenuSel ctermbg=237 ctermfg=252 guibg=#93999e guifg=#0c0c0c
 hi! PmenuSbar ctermbg=236 guibg=#e4e5e6
@@ -69,7 +69,7 @@ hi! SpellBad guisp=#b71421
 hi! SpellCap guisp=#b71421
 hi! SpellLocal guisp=#b71421
 hi! SpellRare guisp=#b71421
-hi! Statement ctermfg=110 gui=NONE guifg=#b71421
+hi! Statement ctermfg=252 gui=NONE guifg=#0c0c0c
 hi! StatusLine cterm=reverse ctermbg=234 ctermfg=245 gui=reverse guibg=#0c0c0c guifg=#868c91 term=reverse
 hi! StatusLineTerm cterm=reverse ctermbg=234 ctermfg=245 gui=reverse guibg=#0c0c0c guifg=#868c91 term=reverse
 hi! StatusLineNC cterm=reverse ctermbg=238 ctermfg=233 gui=reverse guibg=#3f3f3f guifg=#bbbec1

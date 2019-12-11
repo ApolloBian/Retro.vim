@@ -18,8 +18,6 @@ function! retro#palette#dark#create() abort
   " gui {{{
   let g = {}
 
-  " TODO: select red and white according to some reference pictures
-  " SA keycaps
   let g.red    = pgmnt#color#hsl(hue_red,    0.80, 0.40)    "selected red
   let g.darkblue = pgmnt#color#hsl(hue_blue, 0.80, 0.40)
   let g.blue   = g.red

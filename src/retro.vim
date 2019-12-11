@@ -118,6 +118,7 @@ function! s:create_context() abort
         \ 'Function', {
         \   'ctermfg': c.red,
         \   'guifg': g.red,
+        \   'gui': 'bold'
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'Identifier', {
@@ -165,8 +166,8 @@ function! s:create_context() abort
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'Operator', {
-        \   'ctermfg': c.blue,
-        \   'guifg': g.blue,
+        \   'ctermfg': c.normal_fg,
+        \   'guifg': g.normal_fg,
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'Pmenu', {
@@ -239,9 +240,9 @@ function! s:create_context() abort
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'Statement', {
-        \   'ctermfg': c.blue,
+        \   'ctermfg': c.normal_fg,
         \   'gui': 'NONE',
-        \   'guifg': g.blue,
+        \   'guifg': g.normal_fg,
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ ['StatusLine', 'StatusLineTerm'], {
@@ -677,7 +678,13 @@ function! s:create_xline_context() abort
         \   'col_base': col_base,
         \   'col_tabfill': col_base,
         \   'col_edge': col_edge,
-        \   'col_normal': col_edge,
+        \   'col_normal': string([
+        \       g.normal_bg,
+        \       g.red,
+        \       c.normal_bg,
+        \       c.red,
+        \       'bold',
+        \]),
         \   'col_tabsel': col_edge,
         \   'col_error': string([
         \     g.normal_bg,
@@ -696,6 +703,7 @@ function! s:create_xline_context() abort
         \     g.statuslinenc_bg,
         \     c.statuslinenc_fg,
         \     c.statuslinenc_bg,
+        \     'bold',
         \   ]),
         \   'col_warning': string([
         \     g.normal_bg,
@@ -708,18 +716,21 @@ function! s:create_xline_context() abort
         \     g.darkblue,
         \     c.normal_bg,
         \     c.blue,
+        \     'bold',
         \   ]),
         \   'col_replace': string([
         \     g.normal_bg,
         \     g.red,
         \     c.normal_bg,
         \     c.red,
+        \     'bold',
         \   ]),
         \   'col_visual': string([
         \     g.normal_bg,
         \     g.green,
         \     c.normal_bg,
         \     c.green,
+        \     'bold',
         \   ]),
         \   'col_red': string([
         \     g.red,
