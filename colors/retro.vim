@@ -8,7 +8,7 @@
 "
 " File:       iceberg.vim
 " Maintainer: cocopon <cocopon@me.com>
-" Modified:   2019-12-11 17:11+0800
+" Modified:   2019-12-11 17:30+0800
 " License:    MIT
 
 
@@ -56,9 +56,9 @@ hi! MoreMsg ctermfg=150 guifg=#11aa91
 hi! Normal ctermbg=234 ctermfg=252 guibg=NONE guifg=#0c0c0c
 hi! NormalAutoBG ctermbg=NONE ctermfg=252 guibg=NONE guifg=#0c0c0c
 hi! Operator ctermfg=252 guifg=#0c0c0c
-hi! Pmenu ctermbg=235 ctermfg=252 guibg=#e4e5e6 guifg=#0c0c0c
+hi! Pmenu ctermbg=235 ctermfg=252 guibg=#d6d8da guifg=#0c0c0c
 hi! PmenuSel ctermbg=237 ctermfg=252 guibg=#93999e guifg=#0c0c0c
-hi! PmenuSbar ctermbg=236 guibg=#e4e5e6
+hi! PmenuSbar ctermbg=236 guibg=#d6d8da
 hi! PmenuThumb ctermbg=251 guibg=#60656a
 hi! PreProc ctermfg=110 guifg=#b71421
 hi! Question ctermfg=110 guifg=#b71421
@@ -103,8 +103,9 @@ hi! GitGutterAdd ctermbg=235 ctermfg=150 guibg=#bcbfc2 guifg=#11aa91
 hi! GitGutterChange ctermbg=235 ctermfg=109 guibg=#bcbfc2 guifg=#b71421
 hi! GitGutterChangeDelete ctermbg=235 ctermfg=109 guibg=#bcbfc2 guifg=#b71421
 hi! GitGutterDelete ctermbg=235 ctermfg=203 guibg=#bcbfc2 guifg=#b71421
-hi! CocErrorSign ctermbg=235 ctermfg=216 guibg=#bcbfc2 guifg=#b71421
-hi! CocWarningFloat ctermbg=NONE ctermfg=216 guibg=NONE guifg=#f98f38
+hi! CocErrorSign cterm=bold ctermbg=235 ctermfg=216 gui=bold guibg=#bcbfc2 guifg=#b71421
+hi! CocWarningFloat ctermbg=NONE ctermfg=216 guibg=NONE guifg=#ff630a
+hi! CocWarningSign cterm=bold ctermbg=235 ctermfg=216 gui=bold guibg=#bcbfc2 guifg=#ff630a
 hi! Sneak ctermbg=140 ctermfg=234 guibg=#b71421 guifg=#f4f4f4
 hi! SneakScope ctermbg=236 ctermfg=242 guibg=#b2b2b2 guifg=#798085
 hi! SyntasticErrorSign ctermbg=235 ctermfg=203 guibg=#bcbfc2 guifg=#b71421

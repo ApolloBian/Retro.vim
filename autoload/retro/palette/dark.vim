@@ -1,6 +1,4 @@
 function! retro#palette#dark#create() abort
-  let hue_red = 0
-  let hue_orange = 25
 
 
   " color palette
@@ -10,7 +8,7 @@ function! retro#palette#dark#create() abort
   let hue_bgwhite = 350
   let hue_fgblack = 205
   let hue_modgray = 205
-  let hue_orange = 27
+  let hue_orange = 22
   " some other alternative colors
   " #1095a9 (river blue)
 
@@ -24,7 +22,7 @@ function! retro#palette#dark#create() abort
   let g.green   = pgmnt#color#hsl(hue_green, 0.81, 0.37)
   let g.lblue   = g.red
   let g.purple   = g.red
-  let g.orange   = pgmnt#color#hsl(hue_orange, 0.95, 0.60)
+  let g.orange   = pgmnt#color#hsl(hue_orange, 1.00, 0.52)
   let g.highlight_bg = pgmnt#color#hsl(hue_blue, 0.60, 0.60)
 
   " normal
@@ -64,7 +62,7 @@ function! retro#palette#dark#create() abort
   " pmenu
   " let g.pmenu_bg = pgmnt#color#hsl(hue_modgray, 0.20, 0.99)
   " let g.pmenu_bg = g.cursorline_bg
-  let g.pmenu_bg = pgmnt#color#lighten(g.cursorline_bg, 0.15)
+  let g.pmenu_bg = pgmnt#color#lighten(g.cursorline_bg, 0.1)
   let g.pmenu_fg = g.normal_fg
   " let g.pmenusel_bg = pgmnt#color#hsl(hue_modgray, 0.20, 0.45)
   let g.pmenusel_bg = g.cursorlinenr_bg

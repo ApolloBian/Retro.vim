@@ -544,6 +544,8 @@ function! s:create_context() abort
   call add(links, pgmnt#hi#link('CocErrorFloat', 'Error'))
   call extend(rules, pgmnt#hi#group(
         \ 'CocErrorSign', {
+        \   'cterm': 'bold',
+        \   'gui': 'bold',
         \   'ctermbg': c.linenr_bg,
         \   'ctermfg': c.orange,
         \   'guibg': g.linenr_bg,
@@ -554,6 +556,15 @@ function! s:create_context() abort
         \   'ctermbg': 'NONE',
         \   'ctermfg': c.orange,
         \   'guibg': 'NONE',
+        \   'guifg': g.orange,
+        \ }))
+  call extend(rules, pgmnt#hi#group(
+        \ 'CocWarningSign', {
+        \   'cterm': 'bold',
+        \   'gui': 'bold',
+        \   'ctermbg': c.linenr_bg,
+        \   'ctermfg': c.orange,
+        \   'guibg': g.linenr_bg,
         \   'guifg': g.orange,
         \ }))
 
