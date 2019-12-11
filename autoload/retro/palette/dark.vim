@@ -31,7 +31,7 @@ function! retro#palette#dark#create() abort
   let g.normal_fg = pgmnt#color#hsl(hue_fgblack, 0.00, 0.05)
 
   " linenr
-  let g.linenr_bg = pgmnt#color#hsl(hue_modgray, 0.05, 0.80)
+  let g.linenr_bg = pgmnt#color#hsl(hue_modgray, 0.05, 0.75)
   let g.linenr_fg = pgmnt#color#hsl(hue_modgray, 0.05, 0.50)
   let g.cursorlinenr_bg = pgmnt#color#hsl(hue_modgray, 0.05, 0.60)
   let g.cursorlinenr_fg = g.normal_fg
@@ -45,7 +45,8 @@ function! retro#palette#dark#create() abort
   let g.diffdelete_fg = pgmnt#color#mix(g.red, g.normal_fg, 0.30)
 
   " statusline
-  let g.statusline_bg = pgmnt#color#hsl(hue_modgray, 0.09, 0.55)
+  " let g.statusline_bg = pgmnt#color#hsl(hue_modgray, 0.09, 0.55)
+  let g.statusline_bg = pgmnt#color#darken(g.linenr_bg, 0.2)
   let g.statusline_fg = g.normal_fg
   " let g.statuslinenc_bg = pgmnt#color#lighten(g.statusline_bg, 0.30)
   let g.statuslinenc_bg = pgmnt#color#lighten(g.statusline_bg, 0.2)
@@ -62,11 +63,12 @@ function! retro#palette#dark#create() abort
   " pmenu
   " let g.pmenu_bg = pgmnt#color#hsl(hue_modgray, 0.20, 0.99)
   " let g.pmenu_bg = g.cursorline_bg
-  let g.pmenu_bg = pgmnt#color#lighten(g.cursorline_bg, 0.1)
+  let g.pmenu_bg = pgmnt#color#lighten(g.cursorline_bg, 0.15)
   let g.pmenu_fg = g.normal_fg
   " let g.pmenusel_bg = pgmnt#color#hsl(hue_modgray, 0.20, 0.45)
   let g.pmenusel_bg = g.cursorlinenr_bg
   let g.pmenusel_fg = g.normal_fg
+  let g.pmenuthumb_bg = pgmnt#color#darken(g.pmenusel_bg, 0.2)
 
   " misc
   let g.comment_fg = g.linenr_fg

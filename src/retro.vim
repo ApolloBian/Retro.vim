@@ -186,7 +186,7 @@ function! s:create_context() abort
   call extend(rules, pgmnt#hi#group(
         \ 'PmenuThumb', {
         \   'ctermbg': c.pmenu_fg,
-        \   'guibg': g.pmenu_fg,
+        \   'guibg': g.pmenuthumb_bg,
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'PreProc', {
