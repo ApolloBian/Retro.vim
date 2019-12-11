@@ -8,7 +8,7 @@
 "
 " File:       iceberg.vim
 " Maintainer: cocopon <cocopon@me.com>
-" Modified:   2019-12-11 17:30+0800
+" Modified:   2019-12-11 17:46+0800
 " License:    MIT
 
 
@@ -99,10 +99,10 @@ hi! EasyMotionShade ctermfg=239 guifg=#3d4f5b
 hi! EasyMotionTarget ctermfg=150 guifg=#11aa91
 hi! EasyMotionTarget2First ctermfg=203 guifg=#b71421
 hi! EasyMotionTarget2Second ctermfg=203 guifg=#b71421
-hi! GitGutterAdd ctermbg=235 ctermfg=150 guibg=#bcbfc2 guifg=#11aa91
-hi! GitGutterChange ctermbg=235 ctermfg=109 guibg=#bcbfc2 guifg=#b71421
-hi! GitGutterChangeDelete ctermbg=235 ctermfg=109 guibg=#bcbfc2 guifg=#b71421
-hi! GitGutterDelete ctermbg=235 ctermfg=203 guibg=#bcbfc2 guifg=#b71421
+hi! GitGutterAdd ctermbg=235 ctermfg=239 guibg=#bcbfc2 guifg=#798085
+hi! GitGutterChange ctermbg=235 ctermfg=239 guibg=#bcbfc2 guifg=#798085
+hi! GitGutterChangeDelete ctermbg=235 ctermfg=239 guibg=#bcbfc2 guifg=#798085
+hi! GitGutterDelete ctermbg=235 ctermfg=239 guibg=#bcbfc2 guifg=#798085
 hi! CocErrorSign cterm=bold ctermbg=235 ctermfg=216 gui=bold guibg=#bcbfc2 guifg=#b71421
 hi! CocWarningFloat ctermbg=NONE ctermfg=216 guibg=NONE guifg=#ff630a
 hi! CocWarningSign cterm=bold ctermbg=235 ctermfg=216 gui=bold guibg=#bcbfc2 guifg=#ff630a
