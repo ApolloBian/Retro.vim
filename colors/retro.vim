@@ -8,7 +8,7 @@
 "
 " File:       iceberg.vim
 " Maintainer: cocopon <cocopon@me.com>
-" Modified:   2018-09-26 15:06+0800
+" Modified:   2019-12-11 11:09+0800
 " License:    MIT
 
 
@@ -53,11 +53,12 @@ hi! Include ctermfg=110 guifg=#b71421
 hi! LineNr ctermbg=235 ctermfg=239 guibg=#c9ccce guifg=#798085
 hi! MatchParen ctermbg=237 ctermfg=255 guibg=#5b8ed6 guifg=#0c0c0c
 hi! MoreMsg ctermfg=150 guifg=#11aa91
-hi! Normal ctermbg=234 ctermfg=252 guibg=#f4f4f4 guifg=#0c0c0c
+hi! Normal ctermbg=234 ctermfg=252 guibg=NONE guifg=#0c0c0c
+hi! NormalAutoBG ctermbg=NONE ctermfg=252 guibg=NONE guifg=#0c0c0c
 hi! Operator ctermfg=110 guifg=#b71421
-hi! Pmenu ctermbg=235 ctermfg=252 guibg=#c9ccce guifg=#0c0c0c
+hi! Pmenu ctermbg=235 ctermfg=252 guibg=#e3e5e6 guifg=#0c0c0c
 hi! PmenuSel ctermbg=237 ctermfg=252 guibg=#93999e guifg=#0c0c0c
-hi! PmenuSbar ctermbg=236 guibg=#3d4f5b
+hi! PmenuSbar ctermbg=236 guibg=#e3e5e6
 hi! PmenuThumb ctermbg=251 guibg=#0c0c0c
 hi! PreProc ctermfg=110 guifg=#b71421
 hi! Question ctermfg=110 guifg=#b71421
@@ -71,8 +72,8 @@ hi! SpellRare guisp=#b71421
 hi! Statement ctermfg=110 gui=NONE guifg=#b71421
 hi! StatusLine cterm=reverse ctermbg=234 ctermfg=245 gui=reverse guibg=#0c0c0c guifg=#818d96 term=reverse
 hi! StatusLineTerm cterm=reverse ctermbg=234 ctermfg=245 gui=reverse guibg=#0c0c0c guifg=#818d96 term=reverse
-hi! StatusLineNC cterm=reverse ctermbg=238 ctermfg=233 gui=reverse guibg=#ffffff guifg=#ececec
-hi! StatusLineTermNC cterm=reverse ctermbg=238 ctermfg=233 gui=reverse guibg=#ffffff guifg=#ececec
+hi! StatusLineNC cterm=reverse ctermbg=238 ctermfg=233 gui=reverse guibg=#3f3f3f guifg=#b8bfc4
+hi! StatusLineTermNC cterm=reverse ctermbg=238 ctermfg=233 gui=reverse guibg=#3f3f3f guifg=#b8bfc4
 hi! StorageClass ctermfg=110 guifg=#b71421
 hi! String ctermfg=109 guifg=#b71421
 hi! Structure ctermfg=109 guifg=#b71421
@@ -80,10 +81,10 @@ hi! TabLine cterm=NONE ctermbg=245 ctermfg=234 gui=NONE guibg=#818d96 guifg=#0c0
 hi! TabLineFill cterm=reverse ctermbg=234 ctermfg=245 gui=reverse guibg=#0c0c0c guifg=#818d96
 hi! TabLineSel cterm=NONE ctermbg=234 ctermfg=252 gui=NONE guibg=#f4f4f4 guifg=#464646
 hi! Title ctermfg=203 gui=NONE guifg=#b71421
-hi! Todo ctermbg=234 ctermfg=150 guibg=#f4f4f4 guifg=#b71421
+hi! Todo ctermbg=234 ctermfg=150 guibg=NONE guifg=#b71421
 hi! Type ctermfg=109 gui=NONE guifg=#b71421
 hi! Underlined cterm=underline ctermfg=252 gui=underline guifg=#0c0c0c term=underline
-hi! VertSplit cterm=NONE ctermbg=233 ctermfg=233 gui=NONE guibg=#ececec guifg=#ececec
+hi! VertSplit cterm=NONE ctermbg=233 ctermfg=233 gui=NONE guibg=#b8bfc4 guifg=#b8bfc4
 hi! Visual ctermbg=236 guibg=#bebebe
 hi! WildMenu ctermbg=255 ctermfg=234 guibg=#d4d8db guifg=#0c0c0c
 hi! diffAdded ctermfg=150 guifg=#11aa91
@@ -113,25 +114,25 @@ hi! icebergALAccentRed ctermfg=203 guifg=#b71421
 
 hi! link cssBraces Delimiter
 hi! link cssClassName Special
-hi! link cssClassNameDot Normal
+hi! link cssClassNameDot NormalAutoBG
 hi! link cssPseudoClassId Function
 hi! link cssTagName Statement
 hi! link helpHyperTextJump Constant
 hi! link htmlArg Constant
 hi! link htmlEndTag Statement
 hi! link htmlTag Statement
-hi! link jsonQuote Normal
+hi! link jsonQuote NormalAutoBG
 hi! link phpVarSelector Identifier
 hi! link rubyDefine Statement
 hi! link rubyInterpolationDelimiter String
 hi! link rubySharpBang Comment
 hi! link rubyStringDelimiter String
 hi! link sassClass Special
-hi! link shFunction Normal
+hi! link shFunction NormalAutoBG
 hi! link vimContinue Comment
-hi! link vimIsCommand Normal
-hi! link vimCommand Normal
-hi! link vimVar Normal
+hi! link vimIsCommand NormalAutoBG
+hi! link vimCommand NormalAutoBG
+hi! link vimVar NormalAutoBG
 hi! link vimLet Statement
 hi! link vimFuncKey Statement
 hi! link xmlAttrib Constant
@@ -144,18 +145,18 @@ hi! link yamlKeyValueDelimiter Delimiter
 hi! link CtrlPPrtCursor Cursor
 hi! link CtrlPMatch Title
 hi! link CtrlPMode2 StatusLine
-hi! link deniteMatched Normal
+hi! link deniteMatched NormalAutoBG
 hi! link deniteMatchedChar Function
 hi! link jsFlowType Statement
-hi! link jsFlowMaybe Normal
-hi! link jsFlowObject Normal
-hi! link graphqlIdentifier Normal
-hi! link graphqlOperator Normal
+hi! link jsFlowMaybe NormalAutoBG
+hi! link jsFlowObject NormalAutoBG
+hi! link graphqlIdentifier NormalAutoBG
+hi! link graphqlOperator NormalAutoBG
 hi! link graphqlStructure Statement
 hi! link jsArrowFunction Operator
 hi! link jsClassMethodType Statement
 hi! link jsExport Statement
-hi! link jsFuncName Normal
+hi! link jsFuncName NormalAutoBG
 hi! link jsFunction Function
 hi! link jsGlobalObjects Statement
 hi! link jsModuleKeywords Statement
@@ -167,21 +168,21 @@ hi! link markdownCode String
 hi! link markdownCodeDelimiter String
 hi! link markdownHeadingDelimiter Comment
 hi! link markdownRule Comment
-hi! link plug1 Normal
+hi! link plug1 NormalAutoBG
 hi! link plug2 Structure
 hi! link plugDash Comment
 hi! link plugMessage Special
 hi! link svssBraces Delimiter
-hi! link swiftIdentifier Normal
-hi! link typescriptAjaxMethods Normal
-hi! link typescriptBraces Normal
-hi! link typescriptEndColons Normal
+hi! link swiftIdentifier NormalAutoBG
+hi! link typescriptAjaxMethods NormalAutoBG
+hi! link typescriptBraces NormalAutoBG
+hi! link typescriptEndColons NormalAutoBG
 hi! link typescriptGlobalObjects Statement
-hi! link typescriptHtmlElemProperties Normal
+hi! link typescriptHtmlElemProperties NormalAutoBG
 hi! link typescriptIdentifier Statement
-hi! link typescriptMessage Normal
+hi! link typescriptMessage NormalAutoBG
 hi! link typescriptNull Constant
-hi! link typescriptParens Normal
+hi! link typescriptParens NormalAutoBG
 
 if has('nvim')
   let g:terminal_color_0 = '#f4f4f4'

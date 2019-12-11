@@ -1,0 +1,2 @@
+
+hi! link CocFloating Pmenu

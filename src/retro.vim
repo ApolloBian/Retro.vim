@@ -149,7 +149,14 @@ function! s:create_context() abort
         \ 'Normal', {
         \   'ctermbg': c.normal_bg,
         \   'ctermfg': c.normal_fg,
-        \   'guibg': g.normal_bg,
+        \   'guibg': 'NONE',
+        \   'guifg': g.normal_fg,
+        \ }))
+  call extend(rules, pgmnt#hi#group(
+        \ 'NormalAutoBG', {
+        \   'ctermbg': 'NONE',
+        \   'ctermfg': c.normal_fg,
+        \   'guibg': 'NONE',
         \   'guifg': g.normal_fg,
         \ }))
   call extend(rules, pgmnt#hi#group(
@@ -161,8 +168,8 @@ function! s:create_context() abort
         \ 'Pmenu', {
         \   'ctermbg': c.linenr_bg,
         \   'ctermfg': c.normal_fg,
-        \   'guibg': g.linenr_bg,
-        \   'guifg': g.normal_fg,
+        \   'guibg': g.pmenu_bg,
+        \   'guifg': g.pmenu_fg,
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'PmenuSel', {
@@ -303,7 +310,7 @@ function! s:create_context() abort
         \ 'Todo', {
         \   'ctermbg': c.normal_bg,
         \   'ctermfg': c.todo_fg,
-        \   'guibg': g.normal_bg,
+        \   'guibg': 'NONE',
         \   'guifg': g.todo_fg,
         \ }))
   call extend(rules, pgmnt#hi#group(
@@ -347,7 +354,7 @@ function! s:create_context() abort
   " css
   call add(links, pgmnt#hi#link('cssBraces', 'Delimiter'))
   call add(links, pgmnt#hi#link('cssClassName', 'Special'))
-  call add(links, pgmnt#hi#link('cssClassNameDot', 'Normal'))
+  call add(links, pgmnt#hi#link('cssClassNameDot', 'NormalAutoBG'))
   call add(links, pgmnt#hi#link('cssPseudoClassId', 'Function'))
   call add(links, pgmnt#hi#link('cssTagName', 'Statement'))
 
@@ -372,7 +379,7 @@ function! s:create_context() abort
   call add(links, pgmnt#hi#link('htmlTag', 'Statement'))
 
   " json
-  call add(links, pgmnt#hi#link('jsonQuote', 'Normal'))
+  call add(links, pgmnt#hi#link('jsonQuote', 'NormalAutoBG'))
 
   " php
   call add(links, pgmnt#hi#link('phpVarSelector', 'Identifier'))
@@ -387,13 +394,13 @@ function! s:create_context() abort
   call add(links, pgmnt#hi#link('sassClass', 'Special'))
 
   " sh
-  call add(links, pgmnt#hi#link('shFunction', 'Normal'))
+  call add(links, pgmnt#hi#link('shFunction', 'NormalAutoBG'))
 
   " vim
   call add(links, pgmnt#hi#link('vimContinue', 'Comment'))
-  call add(links, pgmnt#hi#link('vimIsCommand', 'Normal'))
-  call add(links, pgmnt#hi#link('vimCommand', 'Normal'))
-  call add(links, pgmnt#hi#link('vimVar', 'Normal'))
+  call add(links, pgmnt#hi#link('vimIsCommand', 'NormalAutoBG'))
+  call add(links, pgmnt#hi#link('vimCommand', 'NormalAutoBG'))
+  call add(links, pgmnt#hi#link('vimVar', 'NormalAutoBG'))
   call add(links, pgmnt#hi#link('vimLet', 'Statement'))
   call add(links, pgmnt#hi#link('vimFuncKey', 'Statement'))
 
@@ -450,7 +457,7 @@ function! s:create_context() abort
   call add(links, pgmnt#hi#link('CtrlPMode2', 'StatusLine'))
 
   " [Denite](https://github.com/Shougo/denite.nvim)
-  call add(links, pgmnt#hi#link('deniteMatched', 'Normal'))
+  call add(links, pgmnt#hi#link('deniteMatched', 'NormalAutoBG'))
   call add(links, pgmnt#hi#link('deniteMatchedChar', 'Function'))
 
   " [EasyMotion](https://github.com/easymotion/vim-easymotion)
@@ -472,12 +479,12 @@ function! s:create_context() abort
 
   " [vim-flow](https://github.com/flowtype/vim-flow)
   call add(links, pgmnt#hi#link('jsFlowType', 'Statement'))
-  call add(links, pgmnt#hi#link('jsFlowMaybe', 'Normal'))
-  call add(links, pgmnt#hi#link('jsFlowObject', 'Normal'))
+  call add(links, pgmnt#hi#link('jsFlowMaybe', 'NormalAutoBG'))
+  call add(links, pgmnt#hi#link('jsFlowObject', 'NormalAutoBG'))
 
   " [vim-graphql](https://github.com/jparise/vim-graphql)
-  call add(links, pgmnt#hi#link('graphqlIdentifier', 'Normal'))
-  call add(links, pgmnt#hi#link('graphqlOperator', 'Normal'))
+  call add(links, pgmnt#hi#link('graphqlIdentifier', 'NormalAutoBG'))
+  call add(links, pgmnt#hi#link('graphqlOperator', 'NormalAutoBG'))
   call add(links, pgmnt#hi#link('graphqlStructure', 'Statement'))
 
   " [Git Gutter](https://github.com/airblade/vim-gitgutter)
@@ -507,7 +514,7 @@ function! s:create_context() abort
   call add(links, pgmnt#hi#link('jsArrowFunction', 'Operator'))
   call add(links, pgmnt#hi#link('jsClassMethodType', 'Statement'))
   call add(links, pgmnt#hi#link('jsExport', 'Statement'))
-  call add(links, pgmnt#hi#link('jsFuncName', 'Normal'))
+  call add(links, pgmnt#hi#link('jsFuncName', 'NormalAutoBG'))
   call add(links, pgmnt#hi#link('jsFunction', 'Function'))
   call add(links, pgmnt#hi#link('jsGlobalObjects', 'Statement'))
   call add(links, pgmnt#hi#link('jsModuleKeywords', 'Statement'))
@@ -523,7 +530,7 @@ function! s:create_context() abort
   call add(links, pgmnt#hi#link('markdownRule', 'Comment'))
 
   " [vim-plug](https://github.com/junegunn/vim-plug)
-  call add(links, pgmnt#hi#link('plug1', 'Normal'))
+  call add(links, pgmnt#hi#link('plug1', 'NormalAutoBG'))
   call add(links, pgmnt#hi#link('plug2', 'Structure'))
   call add(links, pgmnt#hi#link('plugDash', 'Comment'))
   call add(links, pgmnt#hi#link('plugMessage', 'Special'))
@@ -564,18 +571,18 @@ function! s:create_context() abort
         \ }))
 
   " [vim-swift](https://github.com/toyamarinyon/vim-swift)
-  call add(links, pgmnt#hi#link('swiftIdentifier', 'Normal'))
+  call add(links, pgmnt#hi#link('swiftIdentifier', 'NormalAutoBG'))
 
   " [typescript-vim](https://github.com/leafgarland/typescript-vim)
-  call add(links, pgmnt#hi#link('typescriptAjaxMethods', 'Normal'))
-  call add(links, pgmnt#hi#link('typescriptBraces', 'Normal'))
-  call add(links, pgmnt#hi#link('typescriptEndColons', 'Normal'))
+  call add(links, pgmnt#hi#link('typescriptAjaxMethods', 'NormalAutoBG'))
+  call add(links, pgmnt#hi#link('typescriptBraces', 'NormalAutoBG'))
+  call add(links, pgmnt#hi#link('typescriptEndColons', 'NormalAutoBG'))
   call add(links, pgmnt#hi#link('typescriptGlobalObjects', 'Statement'))
-  call add(links, pgmnt#hi#link('typescriptHtmlElemProperties', 'Normal'))
+  call add(links, pgmnt#hi#link('typescriptHtmlElemProperties', 'NormalAutoBG'))
   call add(links, pgmnt#hi#link('typescriptIdentifier', 'Statement'))
-  call add(links, pgmnt#hi#link('typescriptMessage', 'Normal'))
+  call add(links, pgmnt#hi#link('typescriptMessage', 'NormalAutoBG'))
   call add(links, pgmnt#hi#link('typescriptNull', 'Constant'))
-  call add(links, pgmnt#hi#link('typescriptParens', 'Normal'))
+  call add(links, pgmnt#hi#link('typescriptParens', 'NormalAutoBG'))
 
   " [zenspace.vim](https://github.com/thinca/vim-zenspace)
   call extend(rules, pgmnt#hi#group(

@@ -14,7 +14,7 @@ function! s:build_palette() abort
   let col_base     = ['#0c0c0c', '#dadada', 243, 237]
   let col_edge     = ['#0c0c0c', '#818d96', 234, 245]
   let col_gradient = ['#0c0c0c', '#adb3b8', 234, 241]
-  let col_nc       = ['#ffffff', '#ececec', 238, 233]
+  let col_nc       = ['#3f3f3f', '#b8bfc4', 238, 233]
   let col_tabfill  = ['#0c0c0c', '#dadada', 243, 237]
   let col_normal   = ['#0c0c0c', '#818d96', 234, 245]
   let col_error    = ['#f4f4f4', '#b71421', 234, 203]

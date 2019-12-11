@@ -47,18 +47,29 @@ function! retro#palette#dark#create() abort
   " statusline
   let g.statusline_bg = pgmnt#color#hsl(hue_modgray, 0.09, 0.55)
   let g.statusline_fg = g.normal_fg
-  let g.statuslinenc_bg = pgmnt#color#darken(g.normal_bg, 0.03)
-  let g.statuslinenc_fg = pgmnt#color#lighten(g.normal_bg, 0.20)
+  " let g.statuslinenc_bg = pgmnt#color#lighten(g.statusline_bg, 0.30)
+  let g.statuslinenc_bg = pgmnt#color#lighten(g.statusline_bg, 0.2)
+  let g.statuslinenc_fg = pgmnt#color#lighten(g.statusline_fg, 0.2)
+
+  " cursorline
+  let g.cursorline_bg = g.linenr_bg
+  let g.visual_bg = pgmnt#color#adjust_color(
+        \ g.cursorline_bg, {
+        \   'saturation': -0.05,
+        \   'lightness': -0.05,
+        \ })
 
   " pmenu
-  let g.pmenu_bg = pgmnt#color#hsl(hue_modgray, 0.20, 0.30)
+  " let g.pmenu_bg = pgmnt#color#hsl(hue_modgray, 0.20, 0.99)
+  " let g.pmenu_bg = g.cursorline_bg
+  let g.pmenu_bg = pgmnt#color#lighten(g.cursorline_bg, 0.1)
   let g.pmenu_fg = g.normal_fg
-  let g.pmenusel_bg = pgmnt#color#hsl(hue_modgray, 0.20, 0.45)
-  let g.pmenusel_fg = pgmnt#color#hsl(hue_modgray, 0.20, 0.95)
+  " let g.pmenusel_bg = pgmnt#color#hsl(hue_modgray, 0.20, 0.45)
+  let g.pmenusel_bg = g.cursorlinenr_bg
+  let g.pmenusel_fg = g.normal_fg
 
   " misc
   let g.comment_fg = g.linenr_fg
-  let g.cursorline_bg = g.linenr_bg
   let g.folded_bg = g.linenr_bg
   let g.folded_fg = pgmnt#color#adjust_color(
         \ g.folded_bg, {
@@ -71,11 +82,6 @@ function! retro#palette#dark#create() abort
   let g.search_fg = g.normal_bg
   let g.specialkey_fg = g.comment_fg
   let g.todo_fg = g.blue
-  let g.visual_bg = pgmnt#color#adjust_color(
-        \ g.cursorline_bg, {
-        \   'saturation': -0.05,
-        \   'lightness': -0.05,
-        \ })
   let g.wildmenu_bg = pgmnt#color#lighten(g.statusline_bg, 0.30)
   let g.wildmenu_fg = g.statusline_fg
 
