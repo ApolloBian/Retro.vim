@@ -3,6 +3,10 @@
 " See the official site for more information:
 " https://github.com/cocopon/pgmnt.vim
 
+" reload the color change
+source ../autoload/retro/palette/dark.vim
+
+
 function! s:create_context() abort
   let p = retro#palette#dark#create()
   let c = p.cterm
@@ -84,9 +88,9 @@ function! s:create_context() abort
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ ['Error', 'ErrorMsg', 'WarningMsg'], {
-        \   'ctermbg': c.normal_bg,
+        \   'ctermbg': 'NONE',
         \   'ctermfg': c.red,
-        \   'guibg': g.normal_bg,
+        \   'guibg': 'NONE',
         \   'guifg': g.red,
         \ }))
   call extend(rules, pgmnt#hi#group(
@@ -534,6 +538,23 @@ function! s:create_context() abort
   call add(links, pgmnt#hi#link('plug2', 'Structure'))
   call add(links, pgmnt#hi#link('plugDash', 'Comment'))
   call add(links, pgmnt#hi#link('plugMessage', 'Special'))
+
+  " [coc.nvim](https://github.com/neoclide/coc.nvim)
+  call add(links, pgmnt#hi#link('CocErrorFloat', 'Error'))
+  call extend(rules, pgmnt#hi#group(
+        \ 'CocErrorSign', {
+        \   'ctermbg': c.linenr_bg,
+        \   'ctermfg': c.orange,
+        \   'guibg': g.linenr_bg,
+        \   'guifg': g.red,
+        \ }))
+  call extend(rules, pgmnt#hi#group(
+        \ 'CocWarningFloat', {
+        \   'ctermbg': 'NONE',
+        \   'ctermfg': c.orange,
+        \   'guibg': 'NONE',
+        \   'guifg': g.orange,
+        \ }))
 
   " [Sneak](https://github.com/justinmk/vim-sneak/)
   call extend(rules, pgmnt#hi#group(

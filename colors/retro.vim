@@ -8,7 +8,7 @@
 "
 " File:       iceberg.vim
 " Maintainer: cocopon <cocopon@me.com>
-" Modified:   2019-12-11 11:33+0800
+" Modified:   2019-12-11 16:00+0800
 " License:    MIT
 
 
@@ -39,9 +39,9 @@ hi! DiffChange ctermbg=23 ctermfg=159 guibg=#e1b0b4 guifg=#3f0e12
 hi! DiffDelete ctermbg=95 ctermfg=224 guibg=#e1b0b4 guifg=#3f0e12
 hi! DiffText cterm=NONE ctermbg=30 ctermfg=195 gui=NONE guibg=#cf6d75 guifg=#0c0c0c
 hi! Directory ctermfg=109 guifg=#b71421
-hi! Error ctermbg=234 ctermfg=203 guibg=#f4f4f4 guifg=#b71421
-hi! ErrorMsg ctermbg=234 ctermfg=203 guibg=#f4f4f4 guifg=#b71421
-hi! WarningMsg ctermbg=234 ctermfg=203 guibg=#f4f4f4 guifg=#b71421
+hi! Error ctermbg=NONE ctermfg=203 guibg=NONE guifg=#b71421
+hi! ErrorMsg ctermbg=NONE ctermfg=203 guibg=NONE guifg=#b71421
+hi! WarningMsg ctermbg=NONE ctermfg=203 guibg=NONE guifg=#b71421
 hi! EndOfBuffer ctermbg=234 ctermfg=236 guibg=#f4f4f4 guifg=#798085
 hi! NonText ctermbg=234 ctermfg=236 guibg=#f4f4f4 guifg=#798085
 hi! SpecialKey ctermbg=234 ctermfg=236 guibg=#f4f4f4 guifg=#798085
@@ -103,6 +103,8 @@ hi! GitGutterAdd ctermbg=235 ctermfg=150 guibg=#bcbfc2 guifg=#11aa91
 hi! GitGutterChange ctermbg=235 ctermfg=109 guibg=#bcbfc2 guifg=#b71421
 hi! GitGutterChangeDelete ctermbg=235 ctermfg=109 guibg=#bcbfc2 guifg=#b71421
 hi! GitGutterDelete ctermbg=235 ctermfg=203 guibg=#bcbfc2 guifg=#b71421
+hi! CocErrorSign ctermbg=235 ctermfg=216 guibg=#bcbfc2 guifg=#b71421
+hi! CocWarningFloat ctermbg=NONE ctermfg=216 guibg=NONE guifg=#f98f38
 hi! Sneak ctermbg=140 ctermfg=234 guibg=#b71421 guifg=#f4f4f4
 hi! SneakScope ctermbg=236 ctermfg=242 guibg=#b2b2b2 guifg=#798085
 hi! SyntasticErrorSign ctermbg=235 ctermfg=203 guibg=#bcbfc2 guifg=#b71421
@@ -172,6 +174,7 @@ hi! link plug1 NormalAutoBG
 hi! link plug2 Structure
 hi! link plugDash Comment
 hi! link plugMessage Special
+hi! link CocErrorFloat Error
 hi! link svssBraces Delimiter
 hi! link swiftIdentifier NormalAutoBG
 hi! link typescriptAjaxMethods NormalAutoBG

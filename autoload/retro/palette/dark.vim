@@ -10,6 +10,7 @@ function! retro#palette#dark#create() abort
   let hue_bgwhite = 350
   let hue_fgblack = 205
   let hue_modgray = 205
+  let hue_orange = 27
   " some other alternative colors
   " #1095a9 (river blue)
 
@@ -17,13 +18,15 @@ function! retro#palette#dark#create() abort
   " gui {{{
   let g = {}
 
+  " TODO: select red and white according to some reference pictures
+  " SA keycaps
   let g.red    = pgmnt#color#hsl(hue_red,    0.80, 0.40)    "selected red
   let g.darkblue = pgmnt#color#hsl(hue_blue, 0.80, 0.40)
   let g.blue   = g.red
   let g.green   = pgmnt#color#hsl(hue_green, 0.81, 0.37)
   let g.lblue   = g.red
   let g.purple   = g.red
-  let g.orange   = g.red
+  let g.orange   = pgmnt#color#hsl(hue_orange, 0.95, 0.60)
   let g.highlight_bg = pgmnt#color#hsl(hue_blue, 0.60, 0.60)
 
   " normal
