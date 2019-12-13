@@ -8,7 +8,7 @@
 "
 " File:       iceberg.vim
 " Maintainer: cocopon <cocopon@me.com>
-" Modified:   2019-12-11 17:46+0800
+" Modified:   2019-12-14 00:59+0800
 " License:    MIT
 
 
@@ -42,9 +42,9 @@ hi! Directory ctermfg=109 guifg=#b71421
 hi! Error ctermbg=NONE ctermfg=203 guibg=NONE guifg=#b71421
 hi! ErrorMsg ctermbg=NONE ctermfg=203 guibg=NONE guifg=#b71421
 hi! WarningMsg ctermbg=NONE ctermfg=203 guibg=NONE guifg=#b71421
-hi! EndOfBuffer ctermbg=234 ctermfg=236 guibg=#f4f4f4 guifg=#798085
-hi! NonText ctermbg=234 ctermfg=236 guibg=#f4f4f4 guifg=#798085
-hi! SpecialKey ctermbg=234 ctermfg=236 guibg=#f4f4f4 guifg=#798085
+hi! EndOfBuffer ctermbg=NONE ctermfg=236 guibg=NONE guifg=#798085
+hi! NonText ctermbg=NONE ctermfg=236 guibg=NONE guifg=#798085
+hi! SpecialKey ctermbg=NONE ctermfg=236 guibg=NONE guifg=#798085
 hi! Folded ctermbg=235 ctermfg=245 guibg=#bcbfc2 guifg=#ffffff
 hi! FoldColumn ctermbg=235 ctermfg=239 guibg=#bcbfc2 guifg=#798085
 hi! Function ctermfg=203 gui=bold guifg=#b71421

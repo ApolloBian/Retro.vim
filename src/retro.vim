@@ -95,9 +95,9 @@ function! s:create_context() abort
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ ['EndOfBuffer', 'NonText', 'SpecialKey'], {
-        \   'ctermbg': c.normal_bg,
+        \   'ctermbg': 'NONE',
         \   'ctermfg': c.specialkey_fg,
-        \   'guibg': g.normal_bg,
+        \   'guibg': 'NONE',
         \   'guifg': g.specialkey_fg,
         \ }))
   call extend(rules, pgmnt#hi#group(
