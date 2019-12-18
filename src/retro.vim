@@ -219,7 +219,9 @@ function! s:create_context() abort
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'Special', {
+        \   'cterm': 'bold',
         \   'ctermfg': c.blue,
+        \   'gui': 'bold',
         \   'guifg': g.blue,
         \ }))
   call extend(rules, pgmnt#hi#group(
