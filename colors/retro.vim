@@ -8,7 +8,7 @@
 "
 " File:       iceberg.vim
 " Maintainer: cocopon <cocopon@me.com>
-" Modified:   2019-12-18 15:07+0800
+" Modified:   2020-01-02 19:22+0800
 " License:    MIT
 
 
@@ -187,6 +187,7 @@ hi! link typescriptIdentifier Statement
 hi! link typescriptMessage NormalAutoBG
 hi! link typescriptNull Constant
 hi! link typescriptParens NormalAutoBG
+hi! link texMathZoneC Normal
 
 if has('nvim')
   let g:terminal_color_0 = '#f4f4f4'

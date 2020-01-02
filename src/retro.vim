@@ -619,6 +619,9 @@ function! s:create_context() abort
   call add(links, pgmnt#hi#link('typescriptNull', 'Constant'))
   call add(links, pgmnt#hi#link('typescriptParens', 'NormalAutoBG'))
 
+  " [tex]
+  call add(links, pgmnt#hi#link('texMathZoneC', 'Normal'))
+
   " [zenspace.vim](https://github.com/thinca/vim-zenspace)
   call extend(rules, pgmnt#hi#group(
         \ 'ZenSpace', {
