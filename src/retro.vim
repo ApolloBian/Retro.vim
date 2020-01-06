@@ -500,21 +500,21 @@ function! s:create_context() abort
         \   'ctermbg': c.linenr_bg,
         \   'ctermfg': c.linenr_fg,
         \   'guibg': g.linenr_bg,
-        \   'guifg': g.linenr_fg,
+        \   'guifg': g.green,
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ ['GitGutterChange', 'GitGutterChangeDelete'], {
         \   'ctermbg': c.linenr_bg,
         \   'ctermfg': c.linenr_fg,
         \   'guibg': g.linenr_bg,
-        \   'guifg': g.linenr_fg,
+        \   'guifg': g.darkblue,
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'GitGutterDelete', {
         \   'ctermbg': c.linenr_bg,
         \   'ctermfg': c.linenr_fg,
         \   'guibg': g.linenr_bg,
-        \   'guifg': g.linenr_fg,
+        \   'guifg': g.red,
         \ }))
 
   " [vim-javascript](https://github.com/pangloss/vim-javascript)
