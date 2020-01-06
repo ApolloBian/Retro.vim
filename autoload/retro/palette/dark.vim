@@ -79,7 +79,8 @@ function! retro#palette#dark#create() abort
         \ })
   let g.matchparen_bg = g.highlight_bg
   let g.matchparen_fg = g.normal_fg
-  let g.search_bg = g.highlight_bg
+  let g.search_bg = g.red
+  " let g.search_bg = #ffdb72 " yellow
   let g.search_fg = g.normal_bg
   let g.specialkey_fg = g.comment_fg
   let g.todo_fg = g.blue
