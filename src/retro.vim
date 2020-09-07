@@ -36,7 +36,7 @@ function! s:create_context() abort
         \ 'Cursor', {
         \   'ctermbg': c.normal_fg,
         \   'ctermfg': c.normal_bg,
-        \   'guibg': g.normal_fg,
+        \   'guibg': g.red,
         \   'guifg': g.normal_bg,
         \ }))
   call extend(rules, pgmnt#hi#group(
@@ -142,8 +142,9 @@ function! s:create_context() abort
         \ 'MatchParen', {
         \   'ctermbg': c.matchparen_bg,
         \   'ctermfg': c.matchparen_fg,
-        \   'guibg': g.matchparen_bg,
+        \   'guibg': 'NONE',
         \   'guifg': g.matchparen_fg,
+        \   'gui': 'bold',
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'MoreMsg', {

@@ -23,6 +23,7 @@ function! retro#palette#dark#create() abort
   let g.lblue   = g.red
   let g.purple   = g.red
   let g.orange   = pgmnt#color#hsl(hue_orange, 1.00, 0.52)
+  let g.yellow = '#fcd303'
   let g.highlight_bg = pgmnt#color#hsl(hue_blue, 0.60, 0.60)
 
   " normal
@@ -77,8 +78,8 @@ function! retro#palette#dark#create() abort
         \   'saturation': -0.05,
         \   'lightness': +0.35,
         \ })
-  let g.matchparen_bg = g.highlight_bg
-  let g.matchparen_fg = g.normal_fg
+  let g.matchparen_bg = g.normal_bg
+  let g.matchparen_fg = g.yellow
   let g.search_bg = g.red
   " let g.search_bg = #ffdb72 " yellow
   let g.search_fg = g.normal_bg
