@@ -30,14 +30,14 @@ function! retro#palette#light#create() abort
   let g.yellow = "#fbd103"
 
   " normal
-  let g.normal_bg = "#f1f2f2"
+  let g.normal_bg = "#f2f2f2"
   let g.normal_fg = "#000000"
 
   " linenr
-  let g.linenr_bg = "#bcbfc2"
+  let g.linenr_bg = "#bfbfbf"
   let g.linenr_bg = g.normal_bg
-  let g.linenr_fg = "#798085"
-  let g.cursorlinenr_bg = "#93999e"
+  let g.linenr_fg = "#7f7f7f"
+  let g.cursorlinenr_bg = "#999999"
   let g.cursorlinenr_fg = g.normal_fg
 
   " diff
@@ -57,7 +57,7 @@ function! retro#palette#light#create() abort
   let g.statuslinenc_fg = pgmnt#color#lighten(g.statusline_fg, 0.2)
 
   " cursorline
-  let g.cursorline_bg = "#bcbfc2"
+  let g.cursorline_bg = "#bfbfbf"
   let g.visual_bg = pgmnt#color#adjust_color(
         \ g.cursorline_bg, {
         \   'saturation': 0,
