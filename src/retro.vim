@@ -4,11 +4,11 @@
 " https://github.com/cocopon/pgmnt.vim
 
 " reload the color change
-source ../autoload/retro/palette/dark.vim
+source ../autoload/retro/palette/light.vim
 
 
 function! s:create_context() abort
-  let p = retro#palette#dark#create()
+  let p = retro#palette#light#create()
   let c = p.cterm
   let g = p.gui
 
@@ -43,7 +43,7 @@ function! s:create_context() abort
         \ 'CursorLineNr', {
         \   'ctermbg': c.cursorlinenr_bg,
         \   'ctermfg': c.cursorlinenr_fg,
-        \   'guibg': g.cursorlinenr_bg,
+        \   'guibg': g.cursorline_bg,
         \   'guifg': g.cursorlinenr_fg,
         \ }))
   call extend(rules, pgmnt#hi#group(
@@ -94,11 +94,19 @@ function! s:create_context() abort
         \   'guifg': g.red,
         \ }))
   call extend(rules, pgmnt#hi#group(
-        \ ['EndOfBuffer', 'NonText', 'SpecialKey'], {
+        \ ['NonText', 'SpecialKey'], {
         \   'ctermbg': 'NONE',
         \   'ctermfg': c.specialkey_fg,
         \   'guibg': 'NONE',
         \   'guifg': g.specialkey_fg,
+        \ }))
+  " TODO: add option to hide endofbuffer
+  call extend(rules, pgmnt#hi#group(
+        \ 'EndOfBuffer', {
+        \   'ctermbg': 'NONE',
+        \   'ctermfg': c.specialkey_fg,
+        \   'guibg': 'NONE',
+        \   'guifg': g.normal_bg,
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'Folded', {
@@ -214,7 +222,7 @@ function! s:create_context() abort
         \ 'SignColumn', {
         \   'ctermbg': c.linenr_bg,
         \   'ctermfg': c.linenr_fg,
-        \   'guibg': g.linenr_bg,
+        \   'guibg': 'NONE',
         \   'guifg': g.linenr_fg,
         \ }))
   call extend(rules, pgmnt#hi#group(
@@ -674,7 +682,7 @@ call pgmnt#compile(s:create_context(), {
       \ })
 
 function! s:create_xline_context() abort
-  let p = retro#palette#dark#create()
+  let p = retro#palette#light#create()
   let c = p.cterm
   let g = p.gui
 

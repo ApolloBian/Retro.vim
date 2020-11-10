@@ -1,5 +1,5 @@
-function! retro#palette#dark#create() abort
-
+function! retro#palette#light#create() abort
+" # data source: ./external/retro_palette/colors.json
 
   " color palette
   let hue_red = 355
@@ -16,23 +16,28 @@ function! retro#palette#dark#create() abort
   " gui {{{
   let g = {}
 
-  let g.red    = pgmnt#color#hsl(hue_red,    0.80, 0.40)    "selected red
-  let g.darkblue = pgmnt#color#hsl(hue_blue, 0.80, 0.40)
-  let g.blue   = g.red
-  let g.green   = pgmnt#color#hsl(hue_green, 0.81, 0.37)
-  let g.lblue   = g.red
-  let g.purple   = g.red
+  let g.red    = "#b31313"
+  let g.darkblue = "#0e3f80"
+  let g.blue   = "#b31313"
+  " let g.green   = "#12a58c"
+  let g.green   = "#327343"
+  let g.green   = "#298c43"
+  let g.light_green   = "#a4e57e"
+  let g.lblue   = "#b31313"
+  let g.purple   = "#b31313"
   let g.orange   = pgmnt#color#hsl(hue_orange, 1.00, 0.52)
-  let g.highlight_bg = pgmnt#color#hsl(hue_blue, 0.60, 0.60)
+  let g.highlight_bg = "#1458b7"
+  let g.yellow = "#fbd103"
 
   " normal
-  let g.normal_bg = pgmnt#color#hsl(hue_bgwhite, 0.00, 0.96)   "pure white
-  let g.normal_fg = pgmnt#color#hsl(hue_fgblack, 0.00, 0.05)
+  let g.normal_bg = "#f1f2f2"
+  let g.normal_fg = "#000000"
 
   " linenr
-  let g.linenr_bg = pgmnt#color#hsl(hue_modgray, 0.05, 0.75)
-  let g.linenr_fg = pgmnt#color#hsl(hue_modgray, 0.05, 0.50)
-  let g.cursorlinenr_bg = pgmnt#color#hsl(hue_modgray, 0.05, 0.60)
+  let g.linenr_bg = "#bcbfc2"
+  let g.linenr_bg = g.normal_bg
+  let g.linenr_fg = "#798085"
+  let g.cursorlinenr_bg = "#93999e"
   let g.cursorlinenr_fg = g.normal_fg
 
   " diff
@@ -52,10 +57,10 @@ function! retro#palette#dark#create() abort
   let g.statuslinenc_fg = pgmnt#color#lighten(g.statusline_fg, 0.2)
 
   " cursorline
-  let g.cursorline_bg = g.linenr_bg
+  let g.cursorline_bg = "#bcbfc2"
   let g.visual_bg = pgmnt#color#adjust_color(
         \ g.cursorline_bg, {
-        \   'saturation': -0.05,
+        \   'saturation': 0,
         \   'lightness': -0.05,
         \ })
 
@@ -79,9 +84,11 @@ function! retro#palette#dark#create() abort
         \ })
   let g.matchparen_bg = g.highlight_bg
   let g.matchparen_fg = g.normal_fg
-  let g.search_bg = g.red
   " let g.search_bg = #ffdb72 " yellow
+  let g.search_bg = g.red
   let g.search_fg = g.normal_bg
+  let g.search_bg = g.yellow
+  let g.search_fg = g.normal_fg
   let g.specialkey_fg = g.comment_fg
   let g.todo_fg = g.blue
   let g.wildmenu_bg = pgmnt#color#lighten(g.statusline_bg, 0.30)

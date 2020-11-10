@@ -3,16 +3,16 @@ set cpo&vim
 
 
 function! s:build_palette() abort
-  let col_base     = ['#0c0c0c', '#dadada', 243, 237]
-  let col_edge     = ['#0c0c0c', '#868c91', 234, 245]
-  let col_error    = ['#f4f4f4', '#b71421', 234, 203]
-  let col_gradient = ['#0c0c0c', '#b0b3b5', 234, 241]
-  let col_nc       = ['#3f3f3f', '#bbbec1', 238, 233, 'bold']
-  let col_warning  = ['#f4f4f4', '#b71421', 234, 203]
-  let col_insert   = ['#f4f4f4', '#1458b7', 234, 110, 'bold']
-  let col_replace  = ['#f4f4f4', '#b71421', 234, 203, 'bold']
-  let col_visual   = ['#f4f4f4', '#11aa91', 234, 150, 'bold']
-  let col_red      = ['#b71421', '#f4f4f4', 203, 234]
+  let col_base     = ['#000000', '#d6d9d9', 243, 237]
+  let col_edge     = ['#000000', '#bcc0c0', 234, 245]
+  let col_error    = ['#f1f2f2', '#b31313', 234, 203]
+  let col_gradient = ['#000000', '#c9cccc', 234, 241]
+  let col_nc       = ['#333333', '#f0f1f1', 238, 233, 'bold']
+  let col_warning  = ['#f1f2f2', '#b31313', 234, 203]
+  let col_insert   = ['#f1f2f2', '#0e3f80', 234, 110, 'bold']
+  let col_replace  = ['#f1f2f2', '#b31313', 234, 203, 'bold']
+  let col_visual   = ['#f1f2f2', '#298c43', 234, 150, 'bold']
+  let col_red      = ['#b31313', '#f1f2f2', 203, 234]
 
   let p = {}
   let p.inactive = airline#themes#generate_color_map(
