@@ -8,7 +8,7 @@
 "
 " File:       iceberg.vim
 " Maintainer: cocopon <cocopon@me.com>
-" Modified:   2020-11-10 20:34+0800
+" Modified:   2020-11-24 11:12+0800
 " License:    MIT
 
 
@@ -45,7 +45,7 @@ hi WarningMsg ctermbg=NONE ctermfg=203 guibg=NONE guifg=#b31313
 hi NonText ctermbg=NONE ctermfg=236 guibg=NONE guifg=#7f7f7f
 hi SpecialKey ctermbg=NONE ctermfg=236 guibg=NONE guifg=#7f7f7f
 hi EndOfBuffer ctermbg=NONE ctermfg=236 guibg=NONE guifg=#f2f2f2
-hi Folded ctermbg=235 ctermfg=245 guibg=#f2f2f2 guifg=#ffffff
+hi Folded ctermbg=235 ctermfg=245 guibg=#bfbfbf guifg=#666666
 hi FoldColumn ctermbg=235 ctermfg=239 guibg=#f2f2f2 guifg=#7f7f7f
 hi Function ctermfg=203 gui=bold guifg=#b31313
 hi Identifier cterm=NONE ctermfg=109 guifg=#b31313
@@ -56,10 +56,10 @@ hi MoreMsg ctermfg=150 guifg=#298c43
 hi Normal ctermbg=234 ctermfg=252 guibg=NONE guifg=#000000
 hi NormalAutoBG ctermbg=NONE ctermfg=252 guibg=NONE guifg=#000000
 hi Operator ctermfg=252 guifg=#000000
-hi Pmenu ctermbg=235 ctermfg=252 guibg=#d8d8d8 guifg=#000000
+hi Pmenu ctermbg=235 ctermfg=252 guibg=#bfbfbf guifg=#000000
 hi PmenuSel ctermbg=237 ctermfg=252 guibg=#999999 guifg=#000000
-hi PmenuSbar ctermbg=236 guibg=#d8d8d8
-hi PmenuThumb ctermbg=251 guibg=#656565
+hi PmenuSbar ctermbg=236 guibg=#bfbfbf
+hi PmenuThumb ctermbg=251 guibg=#666666
 hi PreProc ctermfg=110 guifg=#b31313
 hi Question ctermfg=110 guifg=#b31313
 hi Search ctermbg=216 ctermfg=234 guibg=#fbd103 guifg=#000000
@@ -70,23 +70,23 @@ hi SpellCap guisp=#b31313
 hi SpellLocal guisp=#b31313
 hi SpellRare guisp=#b31313
 hi Statement ctermfg=252 gui=NONE guifg=#000000
-hi StatusLine cterm=reverse ctermbg=234 ctermfg=245 gui=reverse guibg=#000000 guifg=#bfbfbf term=reverse
-hi StatusLineTerm cterm=reverse ctermbg=234 ctermfg=245 gui=reverse guibg=#000000 guifg=#bfbfbf term=reverse
-hi StatusLineNC cterm=reverse ctermbg=238 ctermfg=233 gui=reverse guibg=#333333 guifg=#f2f2f2
-hi StatusLineTermNC cterm=reverse ctermbg=238 ctermfg=233 gui=reverse guibg=#333333 guifg=#f2f2f2
+hi StatusLine cterm=reverse ctermbg=234 ctermfg=245 gui=reverse guibg=#000000 guifg=#8c8c8c term=reverse
+hi StatusLineTerm cterm=reverse ctermbg=234 ctermfg=245 gui=reverse guibg=#000000 guifg=#8c8c8c term=reverse
+hi StatusLineNC cterm=reverse ctermbg=238 ctermfg=233 gui=reverse guibg=#333333 guifg=#bfbfbf
+hi StatusLineTermNC cterm=reverse ctermbg=238 ctermfg=233 gui=reverse guibg=#333333 guifg=#bfbfbf
 hi StorageClass ctermfg=110 guifg=#b31313
 hi String ctermfg=109 guifg=#b31313
 hi Structure ctermfg=109 guifg=#b31313
-hi TabLine cterm=NONE ctermbg=245 ctermfg=234 gui=NONE guibg=#bfbfbf guifg=#000000
-hi TabLineFill cterm=reverse ctermbg=234 ctermfg=245 gui=reverse guibg=#000000 guifg=#bfbfbf
+hi TabLine cterm=NONE ctermbg=245 ctermfg=234 gui=NONE guibg=#8c8c8c guifg=#000000
+hi TabLineFill cterm=reverse ctermbg=234 ctermfg=245 gui=reverse guibg=#000000 guifg=#8c8c8c
 hi TabLineSel cterm=NONE ctermbg=234 ctermfg=252 gui=NONE guibg=#f2f2f2 guifg=#3c3c3c
 hi Title ctermfg=203 gui=NONE guifg=#b31313
 hi Todo ctermbg=234 ctermfg=150 guibg=NONE guifg=#b31313
 hi Type ctermfg=109 gui=NONE guifg=#b31313
 hi Underlined cterm=underline ctermfg=252 gui=underline guifg=#000000 term=underline
-hi VertSplit cterm=NONE ctermbg=233 ctermfg=233 gui=NONE guibg=#f2f2f2 guifg=#f2f2f2
+hi VertSplit cterm=NONE ctermbg=233 ctermfg=233 gui=NONE guibg=#bfbfbf guifg=#bfbfbf
 hi Visual ctermbg=236 guibg=#b2b2b2
-hi WildMenu ctermbg=255 ctermfg=234 guibg=#ffffff guifg=#000000
+hi WildMenu ctermbg=255 ctermfg=234 guibg=#d8d8d8 guifg=#000000
 hi diffAdded ctermfg=150 guifg=#298c43
 hi diffRemoved ctermfg=203 guifg=#b31313
 hi ALEErrorSign ctermbg=235 ctermfg=203 guibg=#f2f2f2 guifg=#b31313
@@ -94,8 +94,8 @@ hi ALEWarningSign ctermbg=235 ctermfg=203 guibg=#f2f2f2 guifg=#b31313
 hi ALEStyleError cterm=underline gui=underline
 hi ALEError cterm=underline gui=underline
 hi ALEWarning cterm=underline gui=underline
-hi CtrlPMode1 ctermbg=241 ctermfg=234 guibg=#cbcbcb guifg=#000000
-hi EasyMotionShade ctermfg=239 guifg=#3d4f5b
+hi CtrlPMode1 ctermbg=241 ctermfg=234 guibg=#b2b2b2 guifg=#000000
+hi EasyMotionShade ctermfg=239 guifg=#4c4c4c
 hi EasyMotionTarget ctermfg=150 guifg=#298c43
 hi EasyMotionTarget2First ctermfg=203 guifg=#b31313
 hi EasyMotionTarget2Second ctermfg=203 guifg=#b31313
@@ -176,6 +176,10 @@ hi! link plug2 Structure
 hi! link plugDash Comment
 hi! link plugMessage Special
 hi! link CocErrorFloat Error
+hi! link BufTabLineActive PmenuSel
+hi! link BufTabLineCurrent PmenuThumb
+hi! link BufTabLineFill NormalAutoBG
+hi! link BufTabLineHidden TabLine
 hi! link svssBraces Delimiter
 hi! link swiftIdentifier NormalAutoBG
 hi! link typescriptAjaxMethods NormalAutoBG

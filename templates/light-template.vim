@@ -49,39 +49,31 @@ function! retro#palette#light#create() abort
   let g.diffdelete_fg = pgmnt#color#mix(g.red, g.normal_fg, 0.30)
 
   " statusline
-  " let g.statusline_bg = pgmnt#color#hsl(hue_modgray, 0.09, 0.55)
-  let g.statusline_bg = pgmnt#color#darken(g.linenr_bg, 0.2)
+  let g.statusline_bg = "{% hex.shades.shade55}"
   let g.statusline_fg = g.normal_fg
-  " let g.statuslinenc_bg = pgmnt#color#lighten(g.statusline_bg, 0.30)
-  let g.statuslinenc_bg = pgmnt#color#lighten(g.statusline_bg, 0.2)
-  let g.statuslinenc_fg = pgmnt#color#lighten(g.statusline_fg, 0.2)
+  let g.statuslinenc_bg = "{% hex.shades.shade75}"
+  let g.statuslinenc_fg = "{% hex.shades.shade20}"
 
   " cursorline
   let g.cursorline_bg = "{% hex.shades.shade75}"
-  let g.visual_bg = pgmnt#color#adjust_color(
-        \ g.cursorline_bg, {
-        \   'saturation': 0,
-        \   'lightness': -0.05,
-        \ })
+  let g.visual_bg = "{% hex.shades.shade70}"
 
   " pmenu
   " let g.pmenu_bg = pgmnt#color#hsl(hue_modgray, 0.20, 0.99)
   " let g.pmenu_bg = g.cursorline_bg
-  let g.pmenu_bg = pgmnt#color#lighten(g.cursorline_bg, 0.1)
+  let g.pmenu_bg = "{% hex.shades.shade65}"
+  let g.pmenu_bg = "{% hex.shades.shade50}"
+  let g.pmenu_bg = g.cursorline_bg
   let g.pmenu_fg = g.normal_fg
   " let g.pmenusel_bg = pgmnt#color#hsl(hue_modgray, 0.20, 0.45)
-  let g.pmenusel_bg = g.cursorlinenr_bg
+  let g.pmenusel_bg = "{% hex.shades.shade60}"
   let g.pmenusel_fg = g.normal_fg
-  let g.pmenuthumb_bg = pgmnt#color#darken(g.pmenusel_bg, 0.2)
+  let g.pmenuthumb_bg  = "{% hex.shades.shade40}"
 
   " misc
-  let g.comment_fg = g.linenr_fg
-  let g.folded_bg = g.linenr_bg
-  let g.folded_fg = pgmnt#color#adjust_color(
-        \ g.folded_bg, {
-        \   'saturation': -0.05,
-        \   'lightness': +0.35,
-        \ })
+  let g.comment_fg = "{% hex.shades.shade50}"
+  let g.folded_bg = "{% hex.shades.shade75}"
+  let g.folded_fg = "{% hex.shades.shade40}"
   let g.matchparen_bg = g.highlight_bg
   let g.matchparen_fg = g.normal_fg
   " let g.search_bg = #ffdb72 " yellow
@@ -91,23 +83,19 @@ function! retro#palette#light#create() abort
   let g.search_fg = g.normal_fg
   let g.specialkey_fg = g.comment_fg
   let g.todo_fg = g.blue
-  let g.wildmenu_bg = pgmnt#color#lighten(g.statusline_bg, 0.30)
+  let g.wildmenu_bg = "{% hex.shades.shade85}"
   let g.wildmenu_fg = g.statusline_fg
 
   " airline/lightline
-  let g.xline_base_bg = pgmnt#color#adjust_color(
-        \ g.normal_bg, {
-        \   'saturation': 0.00,
-        \   'lightness': -0.10,
-        \ })
+  let g.xline_base_bg = "{% hex.shades.shade85}"
   let g.xline_base_fg = g.normal_fg
   let g.xline_edge_bg = g.statusline_bg
   let g.xline_edge_fg = g.statusline_fg
-  let g.xline_gradient_bg = pgmnt#color#mix(g.xline_base_bg, g.xline_edge_bg, 0.50)
+  let g.xline_gradient_bg = "{% hex.shades.shade70}"
   let g.xline_gradient_fg = g.xline_edge_fg
 
   " plugins
-  let g.easymotion_shade_fg = pgmnt#color#hsl(hue_modgray, 0.20, 0.30)
+  let g.easymotion_shade_fg = "{% hex.shades.shade30}"
   " }}}
 
   " cterm {{{

@@ -595,6 +595,14 @@ function! s:create_context() abort
         \   'guifg': g.comment_fg,
         \ }))
 
+  " [Buftabline](https://github.com/ap/vim-buftabline)
+  call add(links, pgmnt#hi#link('BufTabLineActive', 'PmenuSel'))
+  call add(links, pgmnt#hi#link('BufTabLineCurrent', 'PmenuThumb'))
+  call add(links, pgmnt#hi#link('BufTabLineFill', 'NormalAutoBG'))
+  call add(links, pgmnt#hi#link('BufTabLineHidden', 'TabLine'))
+
+
+
   " [SVSS](https://github.com/cocopon/svss.vim)
   call add(links, pgmnt#hi#link('svssBraces', 'Delimiter'))
   

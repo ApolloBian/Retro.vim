@@ -12,9 +12,9 @@ function! s:build_palette() abort
         \ 'tabline':  {}}
 
   let col_base     = ['#000000', '#d8d8d8', 243, 237]
-  let col_edge     = ['#000000', '#bfbfbf', 234, 245]
-  let col_gradient = ['#000000', '#cbcbcb', 234, 241]
-  let col_nc       = ['#333333', '#f2f2f2', 238, 233, 'bold']
+  let col_edge     = ['#000000', '#8c8c8c', 234, 245]
+  let col_gradient = ['#000000', '#b2b2b2', 234, 241]
+  let col_nc       = ['#333333', '#bfbfbf', 238, 233, 'bold']
   let col_tabfill  = ['#000000', '#d8d8d8', 243, 237]
   let col_normal   = ['#f2f2f2', '#b31313', 234, 203, 'bold']
   let col_error    = ['#f2f2f2', '#b31313', 234, 203]
@@ -22,7 +22,7 @@ function! s:build_palette() abort
   let col_insert   = ['#f2f2f2', '#0e3f80', 234, 110, 'bold']
   let col_replace  = ['#f2f2f2', '#b31313', 234, 203, 'bold']
   let col_visual   = ['#f2f2f2', '#298c43', 234, 150, 'bold']
-  let col_tabsel   = ['#000000', '#bfbfbf', 234, 245]
+  let col_tabsel   = ['#000000', '#8c8c8c', 234, 245]
 
   let p.normal.middle = [
         \ col_base]
