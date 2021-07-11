@@ -41,9 +41,7 @@ function! s:create_context() abort
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'CursorLineNr', {
-        \   'ctermbg': c.cursorlinenr_bg,
         \   'ctermfg': c.cursorlinenr_fg,
-        \   'guibg': g.cursorline_bg,
         \   'guifg': g.cursorlinenr_fg,
         \ }))
   call extend(rules, pgmnt#hi#group(
@@ -141,9 +139,7 @@ function! s:create_context() abort
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'LineNr', {
-        \   'ctermbg': c.linenr_bg,
         \   'ctermfg': c.linenr_fg,
-        \   'guibg': g.linenr_bg,
         \   'guifg': g.linenr_fg,
         \ }))
   call extend(rules, pgmnt#hi#group(
@@ -594,6 +590,12 @@ function! s:create_context() abort
         \   'guibg': g.visual_bg,
         \   'guifg': g.comment_fg,
         \ }))
+  " Colorscheme for coc floating window (hover and such) is CocFloating -> Pmenu
+  " :h coc-highlights for defined color groups
+  call extend(rules, pgmnt#hi#group(
+        \ 'CocFadeOut', {
+        \   'guifg': g.cursorlinenr_bg,
+        \ }))
 
   " [Buftabline](https://github.com/ap/vim-buftabline)
   call add(links, pgmnt#hi#link('BufTabLineActive', 'PmenuSel'))
@@ -606,8 +608,6 @@ function! s:create_context() abort
         \ }))
   call add(links, pgmnt#hi#link('BufTabLineFill', 'BufTabLineHidden'))
 
-  " Colorscheme for coc floating window (hover and such) is CocFloating -> Pmenu
-  " :h coc-highlights for defined color groups
 
 
 

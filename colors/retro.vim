@@ -8,7 +8,7 @@
 "
 " File:       iceberg.vim
 " Maintainer: cocopon <cocopon@me.com>
-" Modified:   2021-07-12 02:12+0800
+" Modified:   2021-07-12 02:36+0800
 " License:    MIT
 
 
@@ -29,10 +29,10 @@ let g:colors_name = 'retro'
 hi ColorColumn cterm=NONE ctermbg=235 guibg=#bfbfbf
 hi CursorColumn cterm=NONE ctermbg=235 guibg=#bfbfbf
 hi CursorLine cterm=NONE ctermbg=235 guibg=#bfbfbf
-hi Comment ctermfg=242 guifg=#7f7f7f
+hi Comment ctermfg=242 guifg=#666666
 hi Constant ctermfg=140 guifg=#b31313
 hi Cursor ctermbg=252 ctermfg=234 guibg=#b31313 guifg=#f2f2f2
-hi CursorLineNr ctermbg=237 ctermfg=253 guibg=#bfbfbf guifg=#000000
+hi CursorLineNr ctermfg=253 guifg=#000000
 hi Delimiter ctermfg=252 guifg=#000000
 hi DiffAdd ctermbg=29 ctermfg=158 guibg=#b5d3bd guifg=#0c2a14
 hi DiffChange ctermbg=23 ctermfg=159 guibg=#dfafaf guifg=#350505
@@ -42,15 +42,15 @@ hi Directory ctermfg=109 guifg=#b31313
 hi Error ctermbg=NONE ctermfg=203 guibg=NONE guifg=#b31313
 hi ErrorMsg ctermbg=NONE ctermfg=203 guibg=NONE guifg=#b31313
 hi WarningMsg ctermbg=NONE ctermfg=203 guibg=NONE guifg=#b31313
-hi NonText ctermbg=NONE ctermfg=236 guibg=NONE guifg=#7f7f7f
-hi SpecialKey ctermbg=NONE ctermfg=236 guibg=NONE guifg=#7f7f7f
+hi NonText ctermbg=NONE ctermfg=236 guibg=NONE guifg=#666666
+hi SpecialKey ctermbg=NONE ctermfg=236 guibg=NONE guifg=#666666
 hi EndOfBuffer ctermbg=NONE ctermfg=236 guibg=NONE guifg=#f2f2f2
 hi Folded ctermbg=235 ctermfg=245 guibg=#bfbfbf guifg=#666666
 hi FoldColumn ctermbg=235 ctermfg=239 guibg=#f2f2f2 guifg=#7f7f7f
 hi Function ctermfg=203 gui=bold guifg=#b31313
 hi Identifier cterm=NONE ctermfg=109 guifg=#b31313
 hi Include ctermfg=110 guifg=#b31313
-hi LineNr ctermbg=235 ctermfg=239 guibg=#f2f2f2 guifg=#7f7f7f
+hi LineNr ctermfg=239 guifg=#7f7f7f
 hi MatchParen ctermbg=237 ctermfg=255 gui=bold guibg=NONE guifg=#000000
 hi MoreMsg ctermfg=150 guifg=#298c43
 hi Normal ctermbg=234 ctermfg=252 guibg=NONE guifg=#000000
@@ -107,7 +107,8 @@ hi CocErrorSign cterm=bold ctermbg=235 ctermfg=216 gui=bold guibg=#f2f2f2 guifg=
 hi CocWarningFloat ctermbg=NONE ctermfg=216 guibg=NONE guifg=#ff630a
 hi CocWarningSign cterm=bold ctermbg=235 ctermfg=216 gui=bold guibg=#f2f2f2 guifg=#ff630a
 hi Sneak ctermbg=140 ctermfg=234 guibg=#b31313 guifg=#f2f2f2
-hi SneakScope ctermbg=236 ctermfg=242 guibg=#b2b2b2 guifg=#7f7f7f
+hi SneakScope ctermbg=236 ctermfg=242 guibg=#b2b2b2 guifg=#666666
+hi CocFadeOut guifg=#999999
 hi BufTabLineCurrent gui=bold guibg=#8c8c8c guifg=#f2f2f2
 hi SyntasticErrorSign ctermbg=235 ctermfg=203 guibg=#f2f2f2 guifg=#b31313
 hi SyntasticStyleErrorSign ctermbg=235 ctermfg=203 guibg=#f2f2f2 guifg=#b31313
@@ -202,7 +203,7 @@ if has('nvim')
   let g:terminal_color_5 = '#b31313'
   let g:terminal_color_6 = '#b31313'
   let g:terminal_color_7 = '#000000'
-  let g:terminal_color_8 = '#7f7f7f'
+  let g:terminal_color_8 = '#666666'
   let g:terminal_color_9 = '#cf0f0f'
   let g:terminal_color_10 = '#29a449'
   let g:terminal_color_11 = '#cf0f0f'

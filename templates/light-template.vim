@@ -66,7 +66,7 @@ function! retro#palette#light#create() abort
   let g.pmenu_fg = g.normal_fg
 
   " misc
-  let g.comment_fg = "{% hex.shades.shade50}"
+  let g.comment_fg = "{% hex.shades.shade40}"
   let g.folded_bg = "{% hex.shades.shade75}"
   let g.folded_fg = "{% hex.shades.shade40}"
   let g.matchparen_bg = g.highlight_bg
