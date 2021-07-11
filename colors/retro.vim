@@ -8,7 +8,7 @@
 "
 " File:       iceberg.vim
 " Maintainer: cocopon <cocopon@me.com>
-" Modified:   2021-07-12 01:20+0800
+" Modified:   2021-07-12 01:38+0800
 " License:    MIT
 
 
@@ -108,7 +108,7 @@ hi CocWarningFloat ctermbg=NONE ctermfg=216 guibg=NONE guifg=#ff630a
 hi CocWarningSign cterm=bold ctermbg=235 ctermfg=216 gui=bold guibg=#f2f2f2 guifg=#ff630a
 hi Sneak ctermbg=140 ctermfg=234 guibg=#b31313 guifg=#f2f2f2
 hi SneakScope ctermbg=236 ctermfg=242 guibg=#b2b2b2 guifg=#7f7f7f
-hi BufTabLineCurrent ctermbg=251 ctermfg=234 gui=bold guibg=#666666 guifg=#f2f2f2
+hi BufTabLineCurrent gui=bold guibg=#8c8c8c guifg=#f2f2f2
 hi SyntasticErrorSign ctermbg=235 ctermfg=203 guibg=#f2f2f2 guifg=#b31313
 hi SyntasticStyleErrorSign ctermbg=235 ctermfg=203 guibg=#f2f2f2 guifg=#b31313
 hi SyntasticStyleWarningSign ctermbg=235 ctermfg=203 guibg=#f2f2f2 guifg=#b31313
@@ -178,8 +178,8 @@ hi! link plugDash Comment
 hi! link plugMessage Special
 hi! link CocErrorFloat Error
 hi! link BufTabLineActive PmenuSel
-hi! link BufTabLineFill PmenuSel
-hi! link BufTabLineHidden TabLine
+hi! link BufTabLineHidden Pmenu
+hi! link BufTabLineFill BufTabLineHidden
 hi! link svssBraces Delimiter
 hi! link swiftIdentifier NormalAutoBG
 hi! link typescriptAjaxMethods NormalAutoBG
