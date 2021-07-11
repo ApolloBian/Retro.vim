@@ -597,9 +597,18 @@ function! s:create_context() abort
 
   " [Buftabline](https://github.com/ap/vim-buftabline)
   call add(links, pgmnt#hi#link('BufTabLineActive', 'PmenuSel'))
-  call add(links, pgmnt#hi#link('BufTabLineCurrent', 'PmenuThumb'))
-  call add(links, pgmnt#hi#link('BufTabLineFill', 'NormalAutoBG'))
+  call add(links, pgmnt#hi#link('BufTabLineFill', 'PmenuSel'))
   call add(links, pgmnt#hi#link('BufTabLineHidden', 'TabLine'))
+  call extend(rules, pgmnt#hi#group(
+        \ 'BufTabLineCurrent', {
+        \   'ctermbg': c.pmenu_fg,
+        \   'ctermfg': c.normal_bg,
+        \   'guibg': g.pmenuthumb_bg,
+        \   'guifg': g.normal_bg,
+        \   'gui': 'bold',
+        \ }))
+  " Colorscheme for coc floating window is CocFloating, default linked to Pmenu
+  " :h coc-highlights for defined color groups
 
 
 

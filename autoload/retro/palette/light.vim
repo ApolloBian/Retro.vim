@@ -64,6 +64,7 @@ function! retro#palette#light#create() abort
   let g.pmenu_bg = "#a5a5a5"
   let g.pmenu_bg = "#7f7f7f"
   let g.pmenu_bg = g.cursorline_bg
+  let g.pmenu_bg = g.cursorlinenr_bg
   let g.pmenu_fg = g.normal_fg
   " let g.pmenusel_bg = pgmnt#color#hsl(hue_modgray, 0.20, 0.45)
   let g.pmenusel_bg = "#999999"
