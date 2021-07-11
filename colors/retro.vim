@@ -8,7 +8,7 @@
 "
 " File:       iceberg.vim
 " Maintainer: cocopon <cocopon@me.com>
-" Modified:   2021-07-11 22:18+0800
+" Modified:   2021-07-12 01:20+0800
 " License:    MIT
 
 
@@ -56,9 +56,9 @@ hi MoreMsg ctermfg=150 guifg=#298c43
 hi Normal ctermbg=234 ctermfg=252 guibg=NONE guifg=#000000
 hi NormalAutoBG ctermbg=NONE ctermfg=252 guibg=NONE guifg=#000000
 hi Operator ctermfg=252 guifg=#000000
-hi Pmenu ctermbg=235 ctermfg=252 guibg=#999999 guifg=#000000
-hi PmenuSel ctermbg=237 ctermfg=252 guibg=#999999 guifg=#000000
-hi PmenuSbar ctermbg=236 guibg=#999999
+hi Pmenu ctermbg=235 ctermfg=252 guibg=#a5a5a5 guifg=#000000
+hi PmenuSel ctermbg=237 ctermfg=252 guibg=#8c8c8c guifg=#000000
+hi PmenuSbar ctermbg=236 guibg=#a5a5a5
 hi PmenuThumb ctermbg=251 guibg=#666666
 hi PreProc ctermfg=110 guifg=#b31313
 hi Question ctermfg=110 guifg=#b31313

@@ -4,7 +4,7 @@
 " https://github.com/cocopon/pgmnt.vim
 
 " reload the color change
-source ../autoload/retro/palette/light.vim
+source ./autoload/retro/palette/light.vim
 
 
 function! s:create_context() abort
@@ -189,7 +189,7 @@ function! s:create_context() abort
         \ 'PmenuSel', {
         \   'ctermbg': c.cursorlinenr_bg,
         \   'ctermfg': c.normal_fg,
-        \   'guibg': g.cursorlinenr_bg,
+        \   'guibg': g.pmenusel_bg,
         \   'guifg': g.normal_fg,
         \ }))
   call extend(rules, pgmnt#hi#group(
@@ -695,8 +695,8 @@ function! s:create_context() abort
 endfunction
 
 call pgmnt#compile(s:create_context(), {
-      \   'output': '../colors/retro.vim',
-      \   'template': './template.vim',
+      \   'output': './colors/retro.vim',
+      \   'template': './src/template.vim',
       \ })
 
 function! s:create_xline_context() abort
@@ -785,11 +785,11 @@ endfunction
 
 call pgmnt#compile(
       \ s:create_xline_context(), {
-      \   'output': '../autoload/airline/themes/retro.vim',
-      \   'template': './template-airline.vim',
+      \   'output': './autoload/airline/themes/retro.vim',
+      \   'template': './src/template-airline.vim',
       \ })
 call pgmnt#compile(
       \ s:create_xline_context(), {
-      \   'output': '../autoload/lightline/colorscheme/retro.vim',
-      \   'template': './template-lightline.vim',
+      \   'output': './autoload/lightline/colorscheme/retro.vim',
+      \   'template': './src/template-lightline.vim',
       \ })

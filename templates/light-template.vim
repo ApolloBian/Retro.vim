@@ -59,16 +59,11 @@ function! retro#palette#light#create() abort
   let g.visual_bg = "{% hex.shades.shade70}"
 
   " pmenu
-  " let g.pmenu_bg = pgmnt#color#hsl(hue_modgray, 0.20, 0.99)
-  " let g.pmenu_bg = g.cursorline_bg
   let g.pmenu_bg = "{% hex.shades.shade65}"
-  let g.pmenu_bg = "{% hex.shades.shade50}"
-  let g.pmenu_bg = g.cursorline_bg
-  let g.pmenu_fg = g.normal_fg
-  " let g.pmenusel_bg = pgmnt#color#hsl(hue_modgray, 0.20, 0.45)
-  let g.pmenusel_bg = "{% hex.shades.shade60}"
-  let g.pmenusel_fg = g.normal_fg
+  let g.pmenusel_bg = "{% hex.shades.shade55}"
   let g.pmenuthumb_bg  = "{% hex.shades.shade40}"
+  let g.pmenusel_fg = g.normal_fg
+  let g.pmenu_fg = g.normal_fg
 
   " misc
   let g.comment_fg = "{% hex.shades.shade50}"
