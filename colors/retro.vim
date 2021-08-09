@@ -8,7 +8,7 @@
 "
 " File:       iceberg.vim
 " Maintainer: cocopon <cocopon@me.com>
-" Modified:   2021-07-12 02:36+0800
+" Modified:   2021-07-12 14:19+0800
 " License:    MIT
 
 
@@ -181,6 +181,7 @@ hi! link CocErrorFloat Error
 hi! link BufTabLineActive PmenuSel
 hi! link BufTabLineHidden Pmenu
 hi! link BufTabLineFill BufTabLineHidden
+hi! link FloatermBorder Normal
 hi! link svssBraces Delimiter
 hi! link swiftIdentifier NormalAutoBG
 hi! link typescriptAjaxMethods NormalAutoBG

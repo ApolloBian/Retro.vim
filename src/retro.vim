@@ -608,7 +608,8 @@ function! s:create_context() abort
         \ }))
   call add(links, pgmnt#hi#link('BufTabLineFill', 'BufTabLineHidden'))
 
-
+  " Floaterm
+  call add (links, pgmnt#hi#link('FloatermBorder', 'Normal'))
 
 
   " [SVSS](https://github.com/cocopon/svss.vim)
